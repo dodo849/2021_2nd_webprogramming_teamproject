@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #413737;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 상단 네브바 */
+.top-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5rem;
+}
+
+.top-nav > a {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #424242;
+    padding: 0 0.8rem;
+    background-color: white;
+    border: 0px solid white;
+}
+
+.top-nav > a:nth-child(1),.top-nav > a:nth-child(2){
+    border-right: 1.8px solid rgb(199, 199, 199);
+}
+
+/* 메인로고 */
+
+.main-logo{
+    display: block;
+    margin: 0 auto;
+}
+
+/* 서브네브바 */
+
+.sub-nav{
+    width: 600px;
+    height: 40px;
+    margin: 20px auto;
+    background-color: #FAF9F5;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sub-nav > a {
+    text-align: center;
+    line-height: 35px;
+    border: 0px solid #FAF9F5;
+    background-color: #FAF9F5;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.sub-nav > a:hover{
+    color: #FF8A65;
+}
+
+
+/* 메인부 */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    width: 50%;
+    margin: 10vh auto 20vh auto;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 1vw;
+    background-color: white;
+}
+
+.card:hover{
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.card > h3{
+    font-size: 18px;
+    margin: 13%;
+}
+
+.card > img {
+    display: block;
+    width: 130px;
+    margin: 5px auto;
+}
+
+
+
+/* 푸터 */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background: #424242;
+    height: 150px;
+}
+
+footer > div{
+    margin: auto 30px;
+}
+
+footer p, footer h5{
+    font-size: 14px;
+    margin: 10px;
+    color: white;
+}
+
+footer img {
+    margin-right: 30px;
+    width: 150px;
+    max-width: 150px;
+}

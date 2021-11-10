@@ -1,0 +1,57 @@
+section {
+    display: grid;
+    height:80%;
+    width: 100%;
+    grid-template-columns: 1fr 1.25fr 1fr;
+}
+
+article{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+#top {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5%;
+    border-bottom:  2px solid rgb(254,138,99);
+}
+article #ChangeInput{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+article #left{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+#Change01,#Change02{
+    width: 90%;
+    font-size: 20px;
+}
+#Link{
+    text-align: right;
+}
+#Link a{
+    text-decoration: none;
+    color: darkgray;
+}
+#Link a:hover{
+    color: black;
+}
+
+#ChangePass{
+    background-color: rgb(254,138,99);
+    border: 0px;
+    border-radius: 10px;
+    width: 35%;
+    color: white;
+    font-weight: bold;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   font-size: 20px;
+}
+#ChangePass a{
+    color:white;
+    text-decoration: none;
+   }
+   

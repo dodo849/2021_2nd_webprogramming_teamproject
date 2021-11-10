@@ -1,0 +1,29 @@
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgb(66, 66, 66);
+    width: 100%;
+    height: 15%;
+}
+#footerLeft{
+ color:white;
+ display: grid;
+ grid-template-columns: 1.5fr 1fr 1fr;
+}
+#text11{
+    font-weight: bold;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 13px;
+}
+#text12{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 10px;
+}
+#footerRight{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    text-align: center;
+}

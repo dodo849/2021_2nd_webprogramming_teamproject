@@ -7,7 +7,8 @@ const sessionVariable = async (selectedClass) => {
             selectedClass : selectedClass,
         });
 		if(response.data) {
-            console.log(response.data);
+            console.log(response);
+            response.data;
 		}
     }
     catch(error) {
@@ -15,11 +16,26 @@ const sessionVariable = async (selectedClass) => {
     }
 };
 
+const redirect = async () => {
+    try {
+		const response = await axios.post("../php/redirect.php",);
+		if(response.data) {
+            console.log(response);
+            response.data;
+		}
+    }
+    catch(error) {
+        console.log(error);
+    }
+}
+
+
+
 // 음식 분류 클릭 이벤트
 $(".card").click(function(){ //this를 써야해서 화살표함수 사용 불가
     const $selectedClass = $(this).attr('data-food-class');
     sessionVariable($selectedClass);
-    location.href='../html/foodListMenu.html'
+    redirect();
     console.log($selectedClass);
 })
 

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../css/foodList.css">
     <link rel="stylesheet" href="../css/foodListMain.css">
     <title>오늘의 메뉴</title>
+    <!-- 제이쿼리 cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- 엑시오스 cdn -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,32 +22,32 @@
         <img class="header__img-logo" src="../img/logo.png" alt="메인로고" width="250px">
         <div class="header__nav-sub">
             <a>메뉴 추천</a>
-            <a>음식 목록</a>
+            <a class="header__menu-list">음식 목록</a>
         </div>
     </header>
     <!-- css 네이밍 수정하기  -->
     <main>
-        <div class="card">
+        <div class="card" data-food-class="korea">
             <h3 class="card__title">한식</h3>
             <img class="card__img" src="../img/bibimbap.png" alt="한식이미지">
         </div>
-        <div class="card">
+        <div class="card" data-food-class="western">
             <h3 class="card__title">양식</h3>
             <img class="card__img" src="../img/pasta.png" alt="양식이미지">
         </div>
-        <div class="card">
+        <div class="card" data-food-class="china">
             <h3 class="card__title">중식</h3>
             <img class="card__img" src="../img/dimsum.png" alt="중식이미지">
         </div>
-        <div class="card">
+        <div class="card" data-food-class="japanese">
             <h3 class="card__title">일식</h3>
             <img class="card__img" src="../img/sushi.png" alt="일식이미지">
         </div>
-        <div class="card">
+        <div class="card" data-food-class="fast">
             <h3 class="card__title">패스트푸드</h3>
             <img class="card__img" src="../img/fast-food.png" alt="패스트푸드이미지">
         </div>
-        <div class="card">
+        <div class="card" data-food-class="dessert">
             <h3 class="card__title">디저트</h3>
             <img class="card__img" src="../img/cake.png" alt="디저트이미지">
         </div>
@@ -57,5 +61,7 @@
             <img src="../img/logo-white.png" alt="로고이미지" >
         </div>
     </footer>
+
+    <script type="text/javascript" src="../js/foodListMain.js"></script>
 </body>
 </html>

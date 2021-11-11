@@ -60,6 +60,10 @@
     color: #FF8A65;
 }
 
+.header__title{
+    text-align: center;
+    margin: 50px 0;
+}
 
 /* 메인부 */
 
@@ -82,24 +86,6 @@ main{
     background-color: white;
 }
 
-.card:hover{
-    border: 2px solid transparent;
-    background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-
-.card > h3{
-    font-size: 18px;
-    margin: 13%;
-}
-
-.card > img {
-    display: block;
-    width: 130px;
-    margin: 5px auto;
-}
-
 
 
 /* 푸터 */
@@ -111,17 +97,17 @@ footer{
     height: 150px;
 }
 
-footer > div{
-    margin: auto 30px;
+.footer__text-box, .footer__img-box{
+    align-self: center;
 }
 
-footer p, footer h5{
+.footer__title, .footer__detail{
     font-size: 14px;
     margin: 10px;
     color: white;
 }
 
-footer img {
+.footer__img-box img{
     margin-right: 30px;
     width: 150px;
     max-width: 150px;

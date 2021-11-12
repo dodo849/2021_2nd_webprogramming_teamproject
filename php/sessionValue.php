@@ -10,8 +10,7 @@ if(!$_POST["selectedClass"])
 $_SESSION['selectedClass'] = $selectedClass;
 
 if($_SESSION['selectedClass']){
-    // echo json_encode($location, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
-    // echo "location.href='../html/foodListMenu.html'";
+    echo "세션 변수 생성/변경 성공";
 } else {
     echo "세션 변수 생성/변경 실패";
 }

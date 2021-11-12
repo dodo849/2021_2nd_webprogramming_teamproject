@@ -8,7 +8,6 @@ const sessionVariable = async (selectedClass) => {
         });
 		if(response.data) {
             console.log(response);
-            response.data;
 		}
     }
     catch(error) {

@@ -3,18 +3,19 @@ section {
     height:80%;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
+    overflow: hidden;
 }
-*{
-    border: 1px solid gold;
-}
+
+
 article{
     display: grid;
     grid-template-rows: 1fr 1.5fr 3fr;
 }
 #top {
+    font-weight: bold;
     text-align: center;
     font-size: 30px;
-    margin-top: 3%;
+    padding-top: 3%;
     border-bottom:  2px solid rgb(254,138,99);
 }
 #mid{
@@ -25,19 +26,22 @@ article{
 #Box01{
   padding-top: 15%;
 }
-#Box01 h2{
-    text-align: center;
+#Box01 #wellcome{
+    font-weight: bold;
+    font-size: 20px;
+    
+    /*text-align: right;*/
 }
-#change{
-     text-align: left;
-}
+/*#change{
+     text-align: right;
+}*/
 #change a{
    color: darkgray;
     text-decoration: none; 
 }
 #LOGOUT{
     padding-top: 25%;
-    text-align: center;
+    /*text-align: center;*/
 }
 #LogOut{
     background-color: rgb(254,138,99);
@@ -61,4 +65,14 @@ article{
 #bottom #List{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
+    width: 100%;
+    height: 80%;
+}
+#list01,#list02,#list03,#list04{
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    border-radius: 10px;
+    border: 1px solid black;
+   /* box-shadow: 2px 2px 2px 2px gray;*/
 }

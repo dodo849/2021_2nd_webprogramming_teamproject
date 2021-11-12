@@ -3,6 +3,7 @@ section {
     height:80%;
     width: 100%;
     grid-template-columns: 1fr 1.25fr 1fr;
+    overflow: hidden;
 }
 
 article{
@@ -10,9 +11,10 @@ article{
     grid-template-rows: 1fr 3fr;
 }
 #top {
+    font-weight: bold;
     text-align: center;
     font-size: 30px;
-    margin-top: 5%;
+    padding-top: 5%;
     border-bottom:  2px solid rgb(254,138,99);
 }
 article #ChangeInput{

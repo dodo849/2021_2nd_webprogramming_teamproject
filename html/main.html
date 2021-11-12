@@ -5,37 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="./styles/index.css">
-    <title>Today's Menu</title>
+    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <title>오늘의 메뉴</title>
 </head>
 
 <body>
-   <div class="Home">
+    <div class="Home">
         <header>
-            <div id= "member">
+            <div class= "header_member">
                 <img src="./img/member_pic.png" alt="마이페이지" width=21>
-                <a href ="">마이페이지</a>
-                |
-                <a href ="">로그인</a>
-                |
-                <a href ="">회원가입</a>
+                <a>마이페이지</a>
+                &nbsp;|&nbsp;
+                <a>로그인</a>
+                &nbsp;|&nbsp;
+                <a>회원가입</a>
             </div>
-            <div id="logo">
-                <img src="./img/logo_FF8A65.png" alt="오늘의 메뉴 로고" width=280>
+            <img class= "header_logo" src="./img/logo.png" alt="오늘의 메뉴 로고" width=280px>
+            <div class="nav_menu">
+                <div>&nbsp;</div>
+                <a>메뉴 추천</a>
+                <a>음식 목록</a>
+                <div>&nbsp;</div>
             </div>
         </header>
-        <nav>
-            <div id="menu">
-                <div>&nbsp;</div>
-                <div><a href="">메뉴 추천</a></div>
-                <div><a href="">음식 목록</a></div>
-                <div>&nbsp;</div>
-            </div>
-        </nav>
-        <div class="main">
+        <main>
             <div class="recommend">
                 <div id="hate">싫어하는 메뉴를 선택해주세요!</div>
-                <form id="hatesearch">
+                <form class="hatesearch">
                     <label for="hateinput" id="hatefood">제외할 음식</label>
                     <input type="text" placeholder="제외할 메뉴를 입력해주세요." id="hateinput" >
                     <button id="searchbutton">검색</button>
@@ -43,33 +39,51 @@
                 </form>
                 <div id="loginsave">*로그인 시 검색 기록이 저장됩니다.</div>
             </div>
-            <div>
+            <div class="result">
                 <div id="foodresult">추천 결과</div>
                 <div id="howfood">오늘 이 메뉴는 어떠세요?</div>
                 <div id="foods">
-                    <div class="food">한식</div>
-                    <div class="food">양식</div>
-                    <div class="food">중식</div>
-                    <div class="food">일식</div>
-                    <div class="food">인스턴트</div>
-                    <div class="food">디저트</div>
+                    <button class="food">
+                        <h3>칼국수</h3>
+                        <h5>한식</h5>
+                        <img src="./img/kalguksu.jpg" alt="칼국수">
+                    </button>
+                    <button class="food">
+                        <h3>스파게티</h3>
+                        <h5>양식</h5>
+                        <img src="./img/spagetti.jpg" alt="스파게티">
+                    </button>
+                    <button class="food">
+                        <h3>짜장면</h3>
+                        <h5>중식</h5>
+                        <img src="./img/jjajangmyeon.jpg" alt="짜장면">
+                    </button>
+                    <button class="food">
+                        <h3>우동</h3>
+                        <h5>일식</h5>
+                        <img src="./img/udong.jpg" alt="우동">
+                    </button>
+                    <button class="food">
+                        <h3>햄버거</h3>
+                        <h5>인스턴트</h5>
+                        <img src="./img/hamburger.jpg" alt="햄버거">
+                    </button>
+                    <button class="food">
+                        <h3>케이크</h3>
+                        <h5>디저트</h5>
+                        <img src="./img/cake.jpg" alt="케이크">
+                    </button>
                 </div>
             </div>
-        </div>
+        </main>
         <footer>
-            <div id="footerL">
-                <div>
-                    <div id="team">2021 웹프로그래밍 팀프로젝트</div>
-                    <div id="names">김민수 | 이도연 | 이지민</div>
-                </div>
-                <div>&nbsp;</div>
+            <div class="team">
+                <div>2021 웹프로그래밍 팀프로젝트</div>
+                <p>김민수 | 이도연 | 이지민</p>
             </div>
-            <div id="footerR">
-                <div>&nbsp;</div>
-                <img src="./images/logo_white.png" width=200>
-            </div>
+            <img src="./img/logo-white.png" width=200>
         </footer>
-   </div>
-</body>
+    </body>
+    </div>
 
 </html>

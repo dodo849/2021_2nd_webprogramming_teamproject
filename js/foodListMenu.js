@@ -1,22 +1,50 @@
 const sessionVariable = async () => {
-    try {
-		const response = await axios.get("../php/getSessionVar.php",);
-		if(response.data) {
-			console.log(response.data);
+  try {
+    //세션변수 가져오기
+    const response = await axios.get("../php/getSessionVar.php",);
+    if(response.data) {
+      console.log(response.data);
 
+      //음식분류 타이틀 넣기
       $(".menu__title").html(response.data);
 
-      
-      $("main").append(`<div class="card">
-      <img class="card__img" src="../img/bibimbap.png" alt="한식이미지">
-      <h3 class="card__title">한식</h3>
-      <p class="card__detail">설명</p>
-      </div>`);
-		}
+      //DB에서 메뉴 가져오기
+      const menuResponse = await axios.get("../php/getMenu.php", {
+        seletedClass : response.data,
+      });
+
+      console.log(menuResponse.data[0].menuName);
+      for(let i = 0; i < menuResponse.data.length; i++){
+        $("main").append(`<div class="card">
+        <img class="card__img" src="../img/bibimbap.png" alt="${menuResponse.data[i].menuName}이미지">
+        <h3 class="card__title">${menuResponse.data[i].menuName}</h3>
+        <p class="card__detail">${menuResponse.data[i].menuDetail}</p>
+        </div>`);
+      }
+
+      //중복 코드 좀 제거하기
+      $(".card__detail").hide();
+      $(".card").mouseover(function(e) {
+        //애니메이션 중복되지 않도록 실행중인 애니메이션들은 취소해주기
+        $(this).children().filter(".card__detail").clearQueue();
+        $(this).children().filter(".card__title").clearQueue();
+        $(this).children().filter(".card__title").fadeOut(200);
+        $(this).children().filter(".card__detail").delay(250).fadeIn(200);
+      })
+      $(".card").mouseleave(function(e) {
+        $(this).children().filter(".card__detail").clearQueue();
+        $(this).children().filter(".card__title").clearQueue();
+        $(this).children().filter(".card__detail").fadeOut(200);
+        $(this).children().filter(".card__title").delay(300).fadeIn(200);
+      })
     }
-    catch(error) {
-        console.log(error);
-    }
+  }
+  catch(error) {
+      console.log(error);
+  }
 };
 
 sessionVariable();
+
+
+

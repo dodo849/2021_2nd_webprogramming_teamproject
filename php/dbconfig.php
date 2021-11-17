@@ -9,7 +9,7 @@ header("Content-Type:application/json");
 $host = 'localhost';
 $user = 'root';
 $pw = '11111111';
-$dbName = 'test';
+$dbName = 'menu';
 
 $db = new mysqli($host, $user, $pw, $dbName);
 

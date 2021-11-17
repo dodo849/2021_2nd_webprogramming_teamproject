@@ -3,7 +3,7 @@
 const sessionVariable = async (selectedClass) => {
     // console.log(`${selectedClass} 가 잘 들어옴`);
     try {
-		const response = await axios.post("../php/sessionValue.php", {
+		const response = await axios.post("../php/createSessionValue.php", {
             selectedClass : selectedClass,
         });
 		if(response.data) {

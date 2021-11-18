@@ -1,7 +1,7 @@
 <?php
     require_once("dbconfigDY.php");
 
-    $sql = "SELECT * FROM korea"; //sql 구문 넣기
+    $sql = "SELECT * FROM food WHERE food_type='한식'"; //sql 구문 넣기
     
     $data = array();
     

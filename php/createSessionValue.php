@@ -4,12 +4,12 @@ session_start();
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 
-$selectedClass = $_POST["selectedClass"];
+$selectedFoodType = $_POST["selectedFoodType"];
 
-$_SESSION['selectedClass'] = $selectedClass;
+$_SESSION['selectedFoodType'] = $selectedFoodType;
 
-if($_SESSION['selectedClass']){
-    echo "세션 변수 생성/변경 성공".$_SESSION['selectedClass'];
+if($_SESSION['selectedFoodType']){
+    echo "세션 변수 생성/변경 성공".$_SESSION['selectedFoodType'];
 } else {
     echo "세션 변수 생성/변경 실패";
 }

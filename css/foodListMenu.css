@@ -4,6 +4,7 @@
     text-align: center;
 }
 
+
 .card:hover{
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);
@@ -20,6 +21,11 @@
     display: block;
     width: 130px;
     margin: 5px auto;
+}
+
+.card__detail{
+    padding: 1rem;
+
 }
 
 

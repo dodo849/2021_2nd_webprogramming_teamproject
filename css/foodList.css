@@ -99,11 +99,12 @@ footer{
 
 .footer__text-box, .footer__img-box{
     align-self: center;
+    margin: 2rem;
 }
 
 .footer__title, .footer__detail{
     font-size: 14px;
-    margin: 10px;
+    margin: 1rem;
     color: white;
 }
 

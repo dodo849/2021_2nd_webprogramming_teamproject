@@ -1,5 +1,9 @@
 /* 음식리스트 한식페이지 */
 
+.menu__title {
+    text-align: center;
+}
+
 .card:hover{
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);

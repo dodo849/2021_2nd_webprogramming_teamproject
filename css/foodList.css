@@ -71,7 +71,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
     width: 50%;
     margin: 10vh auto 20vh auto;
 }

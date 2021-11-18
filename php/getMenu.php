@@ -1,5 +1,5 @@
 <?php
-    require_once("dbconfig.php");
+    require_once("dbconfigDY.php");
 
     $sql = "SELECT * FROM korea"; //sql 구문 넣기
     

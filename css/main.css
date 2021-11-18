@@ -5,7 +5,7 @@
     color:#413737;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.Home{
+body{
     width: 100%;
     display: grid;
     grid-template-rows: 330px 1fr 150px;
@@ -40,11 +40,13 @@ header{
     display: grid;
     grid-template-columns: 0.9fr 1fr 1fr 0.9fr;
 }
-
+.nav_menu > a:hover{
+    color: #FF8A65;
+}
 /*메인-싫어하는 음식 입력 및 검색*/
 main{
     display: grid;
-    grid-template-rows: 1fr 900px;
+    grid-template-rows: 1fr 850px;
 }
 .recommend{
     background-color: #FAF9F5;
@@ -53,9 +55,15 @@ main{
     margin-top: 55px;
     text-align: center;
 }
-.hatesearch{
+#hatesearch{
     text-align: center;
     margin-top: 45px
+}
+#hatesearch > p{
+    margin-left: 60px;
+}
+#hate_button{
+    text-align: center;
 }
 
 #hatefood{
@@ -63,12 +71,14 @@ main{
     font-size: 22px;
     margin-right: 25px;
 }
-#hateinput{
-    width: 350px;
+.hateinput{
+    width: 340px;
     height: 40px;
     border: solid;
     border-radius: 5px;
     border-color: #CBCBCB;
+    padding-left: 10px;
+    margin-top: 15px;
 }
 #searchbutton{
     font-weight: bold;
@@ -91,8 +101,19 @@ main{
     color:#FF8A65;
     font-weight: bold;
     margin-top: 15px;
-    margin-left: 25px;
     padding: 0px;
+    margin-left: 25px;
+}
+.remove_button{
+    background-color: white;
+    color:#CBCBCB;
+    font-weight: bold;
+    font-size: 18px;
+    border: 0px;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
 }
 #loginsave{
     color: #A8A8A8;
@@ -118,23 +139,29 @@ main{
 }
 #foods{
     width: 785px;
+    display: flex;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0px auto;
 }
-.food{
+.food{ 
     text-align: center;
     filter: drop-shadow(0px 4px 4px #A8A8A8);
     background-color: white;
     margin-top: 33px;
+    margin: 35px;
     border: 0px;
     max-width: 200px;
+    padding-top: 10px;
     border-radius: 10px;
     font-weight: bold;
     color: #595959;
-    padding-top: 10px;
     height: 240px;
     overflow: hidden;
+    
+}
+.food:hover{
+    border: 2px solid #FF8A65;
 }
 .food img{
     margin-top: 15px;

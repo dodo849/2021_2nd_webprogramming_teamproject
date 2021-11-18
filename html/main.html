@@ -5,85 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>오늘의 메뉴</title>
 </head>
 
 <body>
-    <div class="Home">
-        <header>
-            <div class= "header_member">
-                <img src="./img/member_pic.png" alt="마이페이지" width=21>
-                <a>마이페이지</a>
-                &nbsp;|&nbsp;
-                <a>로그인</a>
-                &nbsp;|&nbsp;
-                <a>회원가입</a>
+    <header>
+        <div class= "header_member">
+            <img src="../img/member_pic.png" alt="마이페이지" width=21>
+            <a>마이페이지</a>
+            <p>&nbsp;|&nbsp;</p>
+            <a>로그인</a>
+            <p>&nbsp;|&nbsp;</p>
+            <a>회원가입</a>
+        </div>
+        <img class= "header_logo" src="../img/logo.png" alt="오늘의 메뉴 로고" width=280px>
+        <div class="nav_menu">
+            <div>&nbsp;</div>
+            <a class="menu_text">메뉴 추천</a>
+            <a class="menu_text">음식 목록</a>
+            <div>&nbsp;</div>
+        </div>
+    </header>
+    <main>
+        <div class="recommend">
+            <div id="hate">싫어하는 메뉴를 선택해주세요!</div>
+            <div id="hatesearch">
+                <label for="hateinput" id="hatefood">제외할 음식</label>
+                <input type="text" placeholder="제외할 메뉴를 입력해주세요." class="hateinput" >
+                <button id="searchbutton" onclick="recommend_food()">검색</button>
             </div>
-            <img class= "header_logo" src="./img/logo.png" alt="오늘의 메뉴 로고" width=280px>
-            <div class="nav_menu">
-                <div>&nbsp;</div>
-                <a>메뉴 추천</a>
-                <a>음식 목록</a>
-                <div>&nbsp;</div>
+            <div id="hate_button"><button id="plusbutton" onclick="add_input()">+</button></div>
+            <div id="loginsave">*로그인 시 검색 기록이 저장됩니다.</div>
+        </div>
+        <div class="result">
+            <div id="foodresult">추천 결과</div>
+            <div id="howfood">오늘 이 메뉴는 어떠세요?</div>
+            <div id="foods">
+                <div class="food"></div>
+                <div class="food"></div>
+                <div class="food"></div>
+                <div class="food"></div>
+                <div class="food"></div>
+                <div class="food"></div>
             </div>
-        </header>
-        <main>
-            <div class="recommend">
-                <div id="hate">싫어하는 메뉴를 선택해주세요!</div>
-                <form class="hatesearch">
-                    <label for="hateinput" id="hatefood">제외할 음식</label>
-                    <input type="text" placeholder="제외할 메뉴를 입력해주세요." id="hateinput" >
-                    <button id="searchbutton">검색</button>
-                    <div><button id="plusbutton">+</button></div>
-                </form>
-                <div id="loginsave">*로그인 시 검색 기록이 저장됩니다.</div>
-            </div>
-            <div class="result">
-                <div id="foodresult">추천 결과</div>
-                <div id="howfood">오늘 이 메뉴는 어떠세요?</div>
-                <div id="foods">
-                    <button class="food">
-                        <h3>칼국수</h3>
-                        <h5>한식</h5>
-                        <img src="./img/kalguksu.jpg" alt="칼국수">
-                    </button>
-                    <button class="food">
-                        <h3>스파게티</h3>
-                        <h5>양식</h5>
-                        <img src="./img/spagetti.jpg" alt="스파게티">
-                    </button>
-                    <button class="food">
-                        <h3>짜장면</h3>
-                        <h5>중식</h5>
-                        <img src="./img/jjajangmyeon.jpg" alt="짜장면">
-                    </button>
-                    <button class="food">
-                        <h3>우동</h3>
-                        <h5>일식</h5>
-                        <img src="./img/udong.jpg" alt="우동">
-                    </button>
-                    <button class="food">
-                        <h3>햄버거</h3>
-                        <h5>인스턴트</h5>
-                        <img src="./img/hamburger.jpg" alt="햄버거">
-                    </button>
-                    <button class="food">
-                        <h3>케이크</h3>
-                        <h5>디저트</h5>
-                        <img src="./img/cake.jpg" alt="케이크">
-                    </button>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="team">
-                <div>2021 웹프로그래밍 팀프로젝트</div>
-                <p>김민수 | 이도연 | 이지민</p>
-            </div>
-            <img src="./img/logo-white.png" width=200>
-        </footer>
-    </body>
-    </div>
+        </div>
+    </main>
+    <footer>
+        <div class="team">
+            <div>2021 웹프로그래밍 팀프로젝트</div>
+            <p>김민수 | 이도연 | 이지민</p>
+        </div>
+        <img src="../img/logo-white.png" width=200>
+    </footer>
+</body>
+        
 
 </html>

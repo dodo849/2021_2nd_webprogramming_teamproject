@@ -1,8 +1,12 @@
 <?php
     require_once("dbconfigDY.php");
 
-    $sql = "SELECT * FROM food WHERE food_type='한식'"; //sql 구문 넣기
-    
+    $_POST = JSON_DECODE(file_get_contents("php://input"), true);
+
+    $selectedFoodType = $_POST["selectedFoodType"];
+
+    $sql = "SELECT * FROM food WHERE food_type='$selectedFoodType';"; //sql 구문 넣기
+
     $data = array();
     
     $res = $db->query($sql);

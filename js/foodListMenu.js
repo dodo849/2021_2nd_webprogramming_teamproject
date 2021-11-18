@@ -8,9 +8,11 @@ const sessionVariable = async () => {
       $(".menu__title").html(response.data);
 
       //DB에서 메뉴 가져오기
-      const menuResponse = await axios.get("../php/getFoodList.php", {
-        seletedFoodType : response.data,
+      const menuResponse = await axios.post("../php/getFoodList.php", {
+        selectedFoodType : response.data,
       });
+
+      console.log(menuResponse.data);
 
       for(let i = 0; i < menuResponse.data.length; i++){
         $("main").append(`<div class="card">

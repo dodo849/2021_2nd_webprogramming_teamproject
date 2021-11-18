@@ -7,6 +7,8 @@
     <link type="text/css" rel="stylesheet" href="/css/index.css">
     <link type="text/css" rel="stylesheet" href="/css/nav.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="/js/login.js"></script>
     <title>LOGIN</title>
   </head>
   <body>
@@ -28,16 +30,12 @@
     <div>&nbsp;</div>
      <article>
           <div id="top">로그인</div>
-          
-          <form id="mid">
-            <div>&nbsp;</div>
+          <div id="mid">
             <div id="LoginInput">
               <div id="left">아이디</div>
               <div><input type="text" id="IdInput"></div>
              </div>
 
-             <div>&nbsp;</div>
-             <div>&nbsp;</div>
 
              <div id="LoginInput">
               <div id="left">비밀번호</div>
@@ -49,7 +47,7 @@
               <div><input type="checkbox" id="SaveId" value="Save">아이디저장</div>
              </div>
 
-             <div>&nbsp;</div>
+        
 
              <div id="LoginInput">
               <div>&nbsp;</div>
@@ -59,19 +57,16 @@
               </div>
              </div>
 
-             <div>&nbsp;</div>
-             <div>&nbsp;</div>
 
              <div id="LoginInput">
               <div>&nbsp;</div>
               <div>
-                <input type="submit" id="LoginButton" value="로그인">
+                <button id="LoginButton" onclick="login()">로그인</button>
               </div>
               </div>
 
-              <div>&nbsp;</div>
     
-          </form>
+            </div>
      </article>
     <div>&nbsp;</div>
   </section>
@@ -91,7 +86,5 @@
       <div><img src="/img/logo-white.png" height="100%" width="50%"></div>
   </div>
   </footer>
-
-  <a href="./html/foodListMain.html">foodListMain</a>
   </body>
 </html>

@@ -1,6 +1,6 @@
 section {
     display: grid;
-    height:130%;
+    height:100%;
     width: 100%;
     grid-template-columns: 1fr 1.75fr 1fr;
     overflow: hidden;
@@ -8,7 +8,7 @@ section {
 
 article{
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
 }
 article #top{
     text-align: center;
@@ -24,12 +24,11 @@ article #left{
 }
 
 #SignupInput{
+    padding-top: 5%;
     display: grid;
     grid-template-columns: 2fr 5fr;
 }
-#IdInput,#PasswordInput,#PasswordCheck,
-#NickNameINput,#SecurityInput01,
-#SecurityInput02, select{
+input,select{
     width: 90%;
     font-size: 20px;
 }

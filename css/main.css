@@ -160,14 +160,22 @@ main{
     overflow: hidden;
     
 }
-.food:hover{
-    border: 2px solid #FF8A65;
-}
 .food img{
     margin-top: 15px;
     max-width: initial;
     height: 200px;
-    margin-left: -10%;
+}
+.food p{
+    font-size: 14px;
+    color: #424242;
+    padding: 10px;
+    display: none;
+}
+.food:hover{
+    border: 2px solid #FF8A65;
+}
+.food:hover p{
+    display: block;
 }
 /*푸터*/
 footer{

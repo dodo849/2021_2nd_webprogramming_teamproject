@@ -7,6 +7,8 @@
     <link type="text/css" rel="stylesheet" href="/css/nav.css">
     <link type="text/css" rel="stylesheet" href="/css/find.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="/js/Find.js"></script>'
     <title>FIND</title>
   </head>
   <body>
@@ -29,16 +31,16 @@
         <div>&nbsp;</div>
          <article>
               <div id="top">비밀번호 찾기</div>
-              <form id="mid">
+              <div id="mid">
                 <div>&nbsp;</div>
                 <div id="PasswordFind">
                 <div id="left">첫번째 보안질문</div>
                 <div>
                   <select name="Security01">
-                   <option value="11">01</option>
-                   <option value="12">02</option>
-                   <option value="13">03</option>
-                   <option value="14">04</option>
+                   <option value="11">처음 비행기를 타고 가본 곳은?</option>
+                   <option value="12">졸업한 초등학교의 이름은?</option>
+                   <option value="13">처음으로 소유했던 자동차의 모델명은?</option>
+                   <option value="14">학창시절 가장 좋아했던 가수는?</option>
                   </select>
                 </div>
                </div>
@@ -55,9 +57,9 @@
               <div id="left">두번째 보안질문</div>
               <div>
                 <select name="Security02">
-                  <option value="21">01</option>
-                  <option value="22">02</option>
-                  <option value="23">03</option>
+                  <option value="21">당신의 고향은?</option>
+                  <option value="22">첫 애완동물의 이름은?</option>
+                  <option value="23">첫번쨰로 해외여행한 국가는?</option>
                   <option value="24">04</option>
                  </select>
               </div>
@@ -72,14 +74,15 @@
 
            <div id="PasswordFind">
             <div>&nbsp;</div>
-            <div> <Input type="submit" id="ChangePassword" value="비밀번호 찾기"></div>
+            <div> <button" id="FindPassword"
+              onclick="find()">비밀번호 찾기</button></div>
            </div>
         
           
 
 
 
-          </form>
+          </div>
 
 
          </article>

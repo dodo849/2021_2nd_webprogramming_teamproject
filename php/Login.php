@@ -1,5 +1,6 @@
 <?php
-require_once("dbconfigID.php");
+//DB임시로바꿈
+require_once("dbconfigDY.php");
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 $id = $_POST["id"];
@@ -14,6 +15,8 @@ if ($row==!null) {
     echo("로그인성공");
     session_start();
     $_SESSION['User_Name']=$row['nickname'];
+    echo $_SESSION['User_Name'];
+    $_SESSION['userId']=$row['id'];
     header('Location: /html/mypage.html');
 } else {            
     echo("fail");

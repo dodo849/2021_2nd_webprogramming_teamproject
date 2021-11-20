@@ -8,7 +8,7 @@ header("Content-Type:application/json");
 
 $host = 'localhost';
 $user = 'root';
-$pw = ''111111;
+$pw = '111111';
 $dbName = 'test';
 
 $db = new mysqli($host, $user, $pw, $dbName);

@@ -4,7 +4,9 @@
     text-align: center;
 }
 
-
+.card{
+    position: relative;
+}
 .card:hover{
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);
@@ -28,4 +30,13 @@
 
 }
 
-
+/* 찜 버튼 */
+.wish__btn, .wish__btn--done{
+    background-color: white;
+    border: 0px white solid;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: calc(100% - 37.5px);
+    top: calc(100% - 37.5px)
+}

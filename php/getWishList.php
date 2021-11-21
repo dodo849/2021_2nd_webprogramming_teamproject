@@ -3,7 +3,6 @@
     session_start();
 
     $loginUserId = $_SESSION['userId'];
-
     
     //wish 테이블에서 현재 유저 정보 불러오기
     $sql = "SELECT * FROM wish WHERE user_id='$loginUserId';"; //sql 구문 넣기

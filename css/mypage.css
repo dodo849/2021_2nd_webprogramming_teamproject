@@ -53,6 +53,7 @@ article{
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 20px;
+    border: 2px solid white;
 }
 #LogOut:hover{
     border:2px solid black;

@@ -34,6 +34,7 @@ article #left{
     width: 90%;
     font-size: 17px;
 }
+
 #FindPassword{
     background-color: rgb(254,138,99);
     border: 0px;
@@ -45,6 +46,7 @@ article #left{
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 20px;
+    border: 2px solid white;
 }
 #FindPassword:hover{
     border: 2px solid black;

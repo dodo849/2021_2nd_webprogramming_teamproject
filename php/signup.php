@@ -18,7 +18,7 @@ $row = $res->fetch_array(MYSQLI_ASSOC);
 //값을 넣어서 회원가입한다.
 if ($row === null) { 
     $sql = "INSERT INTO `user` (`id`, `pwd`,`nickname`,`Q1`,`Q2`)
-    VALUES ('$id','$password','$nickname','$q1','$q2')";
+    VALUES ('$id','$password','$nickname','$q1','$q2');";
     /* VALUES ('$id','$hashepwd','$nickname','$q1','$q2')";*/
     $db->query($sql);
     echo true;

@@ -28,8 +28,7 @@ const signup =async() =>{
 
 
      //입력된 글자가 6자 이상 10자 이하 일 때만 실행
-    if(11>id.lengh>5 && 11>password.lengh>5 && 11>passcheck.lengh>5 
-        && 11>nickname.lengh>5 && 11>q1.lengh>5 && 11>q2.lengh>5){
+    
     if(password===passcheck){//비밀번호와 비밀번호 확인창이 일치 할 경우에만 실행
     if(id&&password&&nickname&&q1&&q2)
     {
@@ -61,7 +60,4 @@ const signup =async() =>{
 }else{//비밀번호와 비밀번호 확인이 일치 하지 않을경우 알림창
     alert("비밀번호확인을 다시 입력해주세요");
     };
-}else{//6글자 미만 10글자 초과일떄 출력되는 알림창
-    alert("6글자 이상 10글자 이하로 입력해주세요.");
-}
 };

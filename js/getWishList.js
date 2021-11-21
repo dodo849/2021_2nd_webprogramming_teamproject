@@ -17,11 +17,65 @@ const getWishList = async () => {
             </div>`
           );
         }
+
+        let wishDoneId;
+        for(let i = 0; i < response.data.length; i++){
+          wishDoneId = response.data[i].id;
+          console.log($(`.wish__btn[data-food-id="${wishDoneId}"]`));
+          $(`.wish__btn[data-food-id="${wishDoneId}"]`).hide();
+          $(`.wish__btn--done[data-food-id="${wishDoneId}"]`).show();
+        }
+
+        $(".card__detail").hide();
+        $(".card").mouseover(function(e) {
+          //애니메이션 중복되지 않도록 실행중인 애니메이션들은 취소해주기
+          $(this).children().filter(".card__detail").clearQueue();
+          $(this).children().filter(".card__title").clearQueue();
+          $(this).children().filter(".card__img").clearQueue();
+          $(this).children().filter(".card__title").fadeOut(200);
+          $(this).children().filter(".card__img").fadeOut(200);
+          $(this).children().filter(".card__detail").delay(250).fadeIn(200);
+        })
+        $(".card").mouseleave(function(e) {
+          $(this).children().filter(".card__detail").clearQueue();
+          $(this).children().filter(".card__title").clearQueue();
+          $(this).children().filter(".card__img").clearQueue();
+          $(this).children().filter(".card__detail").fadeOut(200);
+          $(this).children().filter(".card__title").delay(300).fadeIn(200);
+          $(this).children().filter(".card__img").delay(300).fadeIn(200);
+        })
       }
     }
     catch(error) {
       console.log(error);
     }
 };
+
+const createWish = async (wishFoodId) => {
+  console.log("createWish실행");
+  try {
+    const wishResponse = await axios.post("../php/createWish.php",{
+      wishFoodId : wishFoodId,
+    });
+    if(wishResponse) {
+      console.log(wishResponse.data);
+
+      //찜하기
+      if(wishResponse.data == true){
+        console.log(`.wish__btn[data-food-id="${wishFoodId}"]`);
+        $(`.wish__btn[data-food-id="${wishFoodId}"]`).hide();
+        $(`.wish__btn--done[data-food-id="${wishFoodId}"]`).show();
+      }
+      //찜하기 삭제
+      else{
+        $(`.wish__btn[data-food-id="${wishFoodId}"]`).show();
+        $(`.wish__btn--done[data-food-id="${wishFoodId}"]`).hide();
+      }
+    }
+  }
+  catch(error) {
+      console.log(error);
+  }
+}
 
 getWishList();

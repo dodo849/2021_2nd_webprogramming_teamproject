@@ -14,11 +14,13 @@ const login=async()=>{
             pwd:pwd,
         });
         if(respones.data){
-            if(respones.data=="fail"){
-              alert("아이디 또는 비밀번호가 틀렸습니다");  
+            if(respones.data==0){
+              alert("아이디 또는 비밀번호가 틀렸습니다"); 
+              console.log("로그인 실패"); 
             }else{
-                //로그인 성공했을시 마이페이 화면을 연다(임시로 마이페이지로 연결함)
+                //로그인 성공했을시 마이페이 화면을 연다(임시로 마이페이지로 연결함) 변경가능
                 window.open('/html/mypage.html','_self');
+                console.log("로그인 성공");
             }
         }
     }catch(error){

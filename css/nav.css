@@ -12,6 +12,12 @@ nav{
     height: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+#logo01{
+    height:100%; 
+    width:80%;
 }
 nav a{
     color: black;
@@ -25,17 +31,8 @@ nav a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-#logo01{
-    height:80%; 
-    width:60%;
-}
-#text01 { 
-    padding: auto;
-    font-weight: bold;
-    /*padding-top: 15%;*/
-}
 
-/*#text02{
-   padding-top: 15%;
-    color: darkgray;
-}*/
+#linktext { 
+    font-weight: bold;
+    padding-top: 20%;
+}

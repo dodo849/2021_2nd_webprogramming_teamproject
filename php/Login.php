@@ -12,6 +12,8 @@ if ($row==!NULL) {//row에 값이 있다, 즉 아이디와 비밀번호로 성�
     session_start();//세션 시작
     $_SESSION['User_Name']=$row['nickname'];//닉네임을 세션변수 $_SESSION['User_Name']에 저장
     header('Location: /html/mypage.html');
+    //-----이도연 추가-----//
+    $_SESSION['userId'] = $id;
     echo true;
 } else {            
     echo false;   

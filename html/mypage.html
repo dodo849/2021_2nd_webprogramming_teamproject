@@ -7,7 +7,13 @@
     <link type="text/css" rel="stylesheet" href="/css/nav.css">
     <link type="text/css" rel="stylesheet" href="/css/mypage.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="/css/foodList.css">
+    <link type="text/css" rel="stylesheet" href="/css/foodListMenu.css">
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <!-- 제이쿼리 cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/mypage.js"></script>
     <title>MYPAGE</title>
   </head>
@@ -47,24 +53,8 @@
             </div>
             <div id="bottom">
               <div id="ListName">내가 찜한 목록</div>
-              <div id=List>
-
-                <div>
-                  <div id="list01">01</div>
-                </div>
-
-                <div>
-                  <div id="list02">02</div>
-                </div>
-
-                <div>
-                  <div id="list03">03</div>
-                </div>
-
-                <div>
-                  <div id="list04">04</div>
-                </div>
-
+              <div class="List" id=List>
+              <!-- 동적으로 찜 리스트 추가 -->
               </div>
             </div>
        </article>
@@ -86,6 +76,6 @@
         <div><img src="/img/logo-white.png" height="100%" width="50%"></div>
     </div>
     </footer>
-  
+    <script src="../js/getWishList.js"></script>
   </body>
 </html>

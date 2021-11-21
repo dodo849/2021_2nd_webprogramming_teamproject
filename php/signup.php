@@ -1,5 +1,6 @@
 <?php
-require_once("dbconfigID.php"); 
+// require_once("dbconfigID.php"); 
+require_once("dbconfigDY.php"); 
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 //변수를 받아와서 저장한다

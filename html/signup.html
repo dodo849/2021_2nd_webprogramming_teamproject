@@ -12,19 +12,20 @@
     <title>회원가입</title>
   </head>
   <body>
-
+  <!--네비게이션-->
     <nav>
       <div id="navLeft">
         <div>
-          <img src="/img/logo.png" height="100%" width="60%"> </div>
-        <div id="text01"><a href="menu.html">메뉴 추천</a></div>
-        <div id="text01"><a href="list.html">음식 목록</a></div>
+          <img id="logo01" src="/img/logo.png"> </div>
+        <div id="linktext"><a href="menu.html">메뉴 추천</a></div>
+        <div id="linktext"><a href="list.html">음식 목록</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
       </div>
       <div id="navRight">
     </div>
     </nav>
+<!--화면 중앙 콘텐츠 표시-->
     <section>
       <div>&nbsp;</div>
        <article>
@@ -33,12 +34,12 @@
              
               <div id="SignupInput">
                <div id="left">아이디</div>
-               <div><input type="text" id="IdInput" placeholder="영문숫자 조합 20자 이내 입력해주세요"></div>
+               <div><input type="text" id="IdInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
               </div>
              
               <div id="SignupInput">
                 <div id="left">비밀번호</div>
-                <div><input type="password"id="PasswordInput" placeholder="영문숫자 조합 20자 이내 입력해주세요"></div>
+                <div><input type="password"id="PasswordInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
              </div>
 
      
@@ -49,7 +50,7 @@
     
              <div id="SignupInput">
             <div id="left">닉네임</div>
-            <div><input type="text" id="NickNameInput" placeholder="영문 20자 이내 입력해주세요"></div>
+            <div><input type="text" id="NickNameInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
              </div>
            
             <div id="SignupInput">
@@ -63,13 +64,10 @@
                </select>
              </div>
             </div>
-
-           
             <div id="SignupInput">
              <div>&nbsp;</div>
-             <div><input type="text" id="SecurityInput01"></div>
+             <div><input type="text" id="SecurityInput01" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
           </div>
-
         
           <div id="SignupInput">
             <div id="left">두번째 보안질문</div>
@@ -83,11 +81,9 @@
             </div>
          </div>
 
-
-
          <div id="SignupInput">
           <div>&nbsp;</div>
-          <div><input type="text" id="SecurityInput02"></div>
+          <div><input type="text" id="SecurityInput02" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
          </div>
           <div>&nbsp;</div>
          
@@ -99,7 +95,7 @@
           </div>
        </article>
     </section>
-
+<!--푸터-->
     <footer>
       <div id="footerLeft">
         <div>

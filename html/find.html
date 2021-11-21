@@ -12,13 +12,13 @@
     <title>FIND</title>
   </head>
   <body>
- 
+  <!--네비게이션-->
       <nav>
         <div id="navLeft">
           <div>
-            <img src="/img/logo.png" height="100%" width="60%"> </div>
-          <div id="text01"><a href="menu.html">메뉴 추천</a></div>
-          <div id="text01"><a href="list.html">음식 목록</a></div>
+            <img id="logo01" src="/img/logo.png"> </div>
+          <div id="linktext"><a href="menu.html">메뉴 추천</a></div>
+          <div id="linktext"><a href="list.html">음식 목록</a></div>
           <div>&nbsp;</div>
           <div>&nbsp;</div>
         </div>
@@ -26,13 +26,12 @@
       </div>
       </nav>
 
-
+   <!--화면 중앙 콘텐츠 표시-->
       <section>
         <div>&nbsp;</div>
          <article>
               <div id="top">비밀번호 찾기</div>
               <div id="mid">
-                <div>&nbsp;</div>
                 <div id="PasswordFind">
                   <div id="left">아이디 입력</div>
                   <div>
@@ -50,16 +49,11 @@
                   </select>
                 </div>
                </div>
-
-  
-
                <div id="PasswordFind">
                 <div>&nbsp;</div>
                 <div><input type="text" id="SecurityCheck01"></div>
              </div>
-
-            
-             <div id="PasswordFind">
+               <div id="PasswordFind">
               <div id="left">두번째 보안질문</div>
               <div>
                 <select name="Security02">
@@ -70,29 +64,20 @@
                  </select>
               </div>
            </div>
-          
            <div id="PasswordFind">
             <div>&nbsp;</div>
             <div><input type="text" id="SecurityCheck02"></div>
            </div>
-           
-
            <div id="PasswordFind">
             <div>&nbsp;</div>
-            <div> <button" id="FindPassword"
-              onclick="find()">비밀번호 찾기</button></div>
+            <div> 
+              <button  id="FindPassword" onclick="find()">비밀번호 찾기</button></div>
            </div>
-        
-          
-
-
-
           </div>
-
-
          </article>
         <div>&nbsp;</div>
       </section>
+      <!--푸터-->
       <footer>
         <div id="footerLeft">
           <div>
@@ -108,7 +93,5 @@
           <div><img src="/img/logo-white.png" height="100%" width="50%"></div>
       </div>
       </footer>
- 
-
   </body>
 </html>

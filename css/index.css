@@ -1,10 +1,18 @@
 section {
     display: grid;
-    height:80%;
+    height:75%;
     width: 100%;
     grid-template-columns: 1fr 1.25fr 1fr;
+    overflow: hidden;
 }
-
+#top {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    border-bottom:  2px solid rgb(254,138,99);
+}
 article{
     display: grid;
     grid-template-rows: 1fr 3fr;
@@ -17,11 +25,11 @@ article #LoginInput{
 article #left{
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
 }
 #IdInput, #PassInput{
     width: 90%;
-    font-size: 20px;
+    font-size: 17px;
 }
 #Link{
     text-align: right;
@@ -33,13 +41,7 @@ article #left{
 #Link a:hover{
     color: black;
 }
-#top {
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 5%;
-    border-bottom:  2px solid rgb(254,138,99);
-}
+
 #LoginButton{
     background-color: rgb(254,138,99);
     border: 0px;
@@ -48,13 +50,15 @@ article #left{
     height: 100%;
     color: white;
     font-weight: bold;
-   padding-top: 1%;
-   padding-bottom: 1%;
-   font-size: 20px;
-}
-#LoginButton a{
+    margin-top: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 20px;
     color:white;
     text-decoration: none;
-   }
-   
+}
+#LoginButton:hover{
+    border: 2px solid black;
+}
+
 

@@ -1,6 +1,6 @@
 section {
     display: grid;
-    height:100%;
+    height:120%;
     width: 100%;
     grid-template-columns: 1fr 1.75fr 1fr;
     overflow: hidden;
@@ -14,23 +14,27 @@ article #top{
     text-align: center;
     font-size: 30px;
     padding-top: 5%;
+    padding-bottom: 10%;
     border-bottom:  2px solid rgb(254,138,99);
     font-weight: bold;
 }
-
-article #left{
-    text-align: center;
-    font-size: 20px;
-}
-
 #SignupInput{
     padding-top: 5%;
     display: grid;
     grid-template-columns: 2fr 5fr;
 }
+article #left{
+    
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
 input,select{
     width: 90%;
-    font-size: 20px;
+    font-size: 17px;
+}
+#SignUp:hover{
+    border: 2px solid black;
 }
 #SignUp{
     background-color: rgb(254,138,99);

@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/css/changepass.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="/js/changepass.js"></script>
     <title>비밀번호변경</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
       <div>&nbsp;</div>
        <article>
             <div id="top">비밀번호 변경</div>
-            <form id="mid">
+            <div id="mid">
               <div>&nbsp;</div>
               <div id="ChangeInput">
                 <div id="left">새 비밀번호</div>
@@ -48,7 +49,7 @@
                <div id="ChangeInput">
                 <div>&nbsp;</div>
                 <div>
-                  <input type="submit" id="ChangePass" value="비밀번호 변경">
+                  <button id="ChangePass" onclick="changepwd()">비밀번호 변경</button>
                 </div>
                 </div>
   
@@ -56,7 +57,7 @@
                
   
   
-            </form>
+              </div>
   
   
           

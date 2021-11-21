@@ -22,13 +22,14 @@ article #top{
 #PasswordFind{
     display: grid;
     grid-template-columns: 2fr 5fr;
+    padding-top: 3%;
 }
 article #left{
     text-align: center;
     font-size: 20px;
 }
 
- #SecurityCheck01,#SecurityCheck02,select{
+ #FindPassInput,#SecurityCheck01,#SecurityCheck02,select{
     width: 90%;
     font-size: 20px;
 }

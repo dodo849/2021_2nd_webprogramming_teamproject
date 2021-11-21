@@ -20,7 +20,7 @@ const sessionVariable = async () => {
         <img class="card__img" src="../img/bibimbap.png" alt="${menuResponse.data[i].food_name}이미지">
         <h3 class="card__title">${menuResponse.data[i].food_name}</h3>
         <p class="card__detail">${menuResponse.data[i].food_detail}</p>
-        <button class="store-food" onclick="storeMenu(${menuResponse.data[i].id});">찜</button>
+        <button class="store-food" onclick="createWish(${menuResponse.data[i].id});">찜</button>
         </div>`);
       }
 
@@ -47,15 +47,15 @@ const sessionVariable = async () => {
 };
 
 
-//-----------------store 기능-----------------//
-const storeMenu = async (storeFoodId) => {
-  console.log("storeMenu실행");
+//-----------------wish 기능-----------------//
+const createWish = async (wishFoodId) => {
+  console.log("createWish실행");
   try {
-    const storeResponse = await axios.post("../php/storeMenu.php",{
-      storeFoodId : storeFoodId,
+    const wishResponse = await axios.post("../php/createWish.php",{
+      wishFoodId : wishFoodId,
     });
-    if(storeResponse) {
-      console.log(storeResponse);
+    if(wishResponse) {
+      console.log(wishResponse);
     }
   }
   catch(error) {
@@ -64,6 +64,3 @@ const storeMenu = async (storeFoodId) => {
 }
 
 sessionVariable();
-
-
-

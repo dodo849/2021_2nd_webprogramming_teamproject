@@ -12,62 +12,44 @@
     <title>비밀번호변경</title>
   </head>
   <body>
+    <!--네비게이션-->
     <nav>
       <div id="navLeft">
         <div>
-          <img src="/img/logo.png" height="100%" width="60%"> </div>
-        <div id="text01"><a href="menu.html">메뉴 추천</a></div>
-        <div id="text01"><a href="list.html">음식 목록</a></div>
+          <img id="logo01" src="/img/logo.png"> </div>
+        <div id="linktext"><a href="menu.html">메뉴 추천</a></div>
+        <div id="linktext"><a href="list.html">음식 목록</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
       </div>
       <div id="navRight">
     </div>
     </nav>
-
+    <!--화면 중앙의 콘텐츠 들이 표시 되는곳-->
     <section>
       <div>&nbsp;</div>
        <article>
             <div id="top">비밀번호 변경</div>
             <div id="mid">
-              <div>&nbsp;</div>
               <div id="ChangeInput">
                 <div id="left">새 비밀번호</div>
-                <div><input type="password" id="Change01"></div>
+                <div><input type="password" id="Change01" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
                </div>
-  
-               <div>&nbsp;</div>
-               <div>&nbsp;</div>
-  
                <div id="ChangeInput">
                 <div id="left">비밀번호 확인</div>
-                <div><input type="password" id="Change02"></div>
+                <div><input type="password" id="Change02"placeholder="다시 한번 입력해 주세요 "></div>
                </div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-               
                <div id="ChangeInput">
                 <div>&nbsp;</div>
                 <div>
                   <button id="ChangePass" onclick="changepwd()">비밀번호 변경</button>
                 </div>
                 </div>
-  
-                <div>&nbsp;</div>
-               
-  
-  
               </div>
-  
-  
-          
-  
        </article>
       <div>&nbsp;</div>
     </section>
-
-
-
+   <!--푸터 -->
     <footer>
       <div id="footerLeft">
         <div>
@@ -83,7 +65,5 @@
         <div><img src="/img/logo-white.png" height="100%" width="50%"></div>
     </div>
     </footer>
-  
-
   </body>
 </html>

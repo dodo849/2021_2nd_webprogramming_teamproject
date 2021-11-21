@@ -26,14 +26,14 @@
                 VALUES ('$loginUserId','$wishFoodId');";
                 $db->query($sql);
 
-                echo "찜하기 완료";
+                echo true;
         } 
         //이미 있는 레코드가 있다면 삭제
         else {
             $sql = "DELETE FROM `wish` WHERE user_id='$loginUserId' AND food_id='$wishFoodId';";
             $res = $db->query($sql);
 
-            echo "찜하기 삭제 완료";
+            echo false;
         }
     } else {
         echo "회원가입/로그인을 먼저 해주세요";

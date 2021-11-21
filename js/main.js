@@ -1,14 +1,16 @@
 const recommend_food = async () => {
-    const hateinput = document.querySelector(".hateinput").value;
-    //hateList=[];
-    //for(var i=0; i<hateinput.length; i++){
-        //hateList.push(hateinput[i].value);
-    //}
-    //console.log(hateList);
+
+    //-----이도연 수정-----//
+    const hateinput = document.querySelectorAll(".hateinput");
+    hateList=[];
+    for(var i=0; i<hateinput.length; i++){
+        hateList.push(hateinput[i].value);
+    }
+    console.log(hateList);
     if(hateinput){
         try{
             const response = await axios.post("../php/recommend.php", {
-                hateinput: hateinput
+                hateList: hateList
             });
             if (response.data){
                 console.log(response.data);

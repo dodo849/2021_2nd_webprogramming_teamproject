@@ -71,7 +71,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
     width: 50%;
     margin: 10vh auto 20vh auto;
 }
@@ -79,6 +78,7 @@ main{
 .card {
     width: 200px;
     height: 250px;
+    overflow : scroll;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border: 2px solid transparent;
     border-radius: 10px;

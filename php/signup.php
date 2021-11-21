@@ -1,7 +1,7 @@
 <?php
 require_once("dbconfigID.php"); 
-$_POST = JSON_DECODE(file_get_contents("php://input"), true);
 
+$_POST = JSON_DECODE(file_get_contents("php://input"), true);
 
 $id = $_POST["id"];
 $password = $_POST["password"];

@@ -3,22 +3,24 @@ const sessionVariable = async () => {
     //세션변수 가져오기
     const response = await axios.get("../php/getSessionVar.php",);
     if(response.data) {
-      console.log(response.data);
 
       //음식분류 타이틀 넣기
       $(".menu__title").html(response.data);
 
       //DB에서 메뉴 가져오기
-      const menuResponse = await axios.get("../php/getMenu.php", {
-        seletedClass : response.data,
+      const menuResponse = await axios.post("../php/getFoodList.php", {
+        selectedFoodType : response.data,
       });
 
-      console.log(menuResponse.data[0].menuName);
+      console.log(menuResponse.data);
+
       for(let i = 0; i < menuResponse.data.length; i++){
         $("main").append(`<div class="card">
-        <img class="card__img" src="../img/bibimbap.png" alt="${menuResponse.data[i].menuName}이미지">
-        <h3 class="card__title">${menuResponse.data[i].menuName}</h3>
-        <p class="card__detail">${menuResponse.data[i].menuDetail}</p>
+        <p class="food-id" style="display: none;">${menuResponse.data[i].id}</p>
+        <img class="card__img" src="../img/bibimbap.png" alt="${menuResponse.data[i].food_name}이미지">
+        <h3 class="card__title">${menuResponse.data[i].food_name}</h3>
+        <p class="card__detail">${menuResponse.data[i].food_detail}</p>
+        <button class="store-food" onclick="storeMenu(${menuResponse.data[i].id});">찜</button>
         </div>`);
       }
 
@@ -43,6 +45,23 @@ const sessionVariable = async () => {
       console.log(error);
   }
 };
+
+
+//-----------------store 기능-----------------//
+const storeMenu = async (storeFoodId) => {
+  console.log("storeMenu실행");
+  try {
+    const storeResponse = await axios.post("../php/storeMenu.php",{
+      storeFoodId : storeFoodId,
+    });
+    if(storeResponse) {
+      console.log(storeResponse);
+    }
+  }
+  catch(error) {
+      console.log(error);
+  }
+}
 
 sessionVariable();
 

@@ -18,6 +18,7 @@
     }
     
     $loginUserId = $_SESSION['User_Name'];
+    
     if($loginUserId){
         echo "로그인된 유저: ".$loginUserId;
     }

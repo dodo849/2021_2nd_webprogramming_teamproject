@@ -1,5 +1,5 @@
 <?php
-require_once("dbconfigJM.php");
+require_once("dbconfigDY.php");
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 // $foodInput = $_POST["hateinput"];
@@ -15,7 +15,7 @@ for($i=0; $i<count($foodInput); $i++){
 }
 
 $data = array();
-echo $foodInputToString."\n";
+
 $types=array('한식', '양식', '중식', '일식', '패스트푸드', '디저트');
 for($i=0; $i<6; $i++){
     $sql="SELECT * FROM food WHERE food_type='$types[$i]' AND (food_name) NOT IN($foodInputToString) ORDER BY rand()";
@@ -25,7 +25,7 @@ for($i=0; $i<6; $i++){
 }
 
 if($data){
-    echo json_encode($row, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
+    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
 }else{
     echo false;
 }

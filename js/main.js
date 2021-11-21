@@ -15,6 +15,7 @@ const recommend_food = async () => {
             if (response.data){
                 console.log(response.data);
                 const foodDOM = document.querySelectorAll(".food");
+                
                 for(let i=0; i<6; i++){
                     const card_h3 = document.createElement("h3");
                     const new_h3 = document.createTextNode(response.data[i].food_name);
@@ -52,13 +53,13 @@ const recommend_food = async () => {
 };
 
 const add_input = ()=>{
-    const box = document.getElementById("hatesearch");
+    const box = document.getElementById("hatefood_search");
     const newP = document.createElement('p');
     newP.innerHTML = "<input type='text' placeholder='제외할 메뉴를 입력해주세요.' class='hateinput' ><input type='button' value='X' class='remove_button' onclick='remove(this)'>";
     box.appendChild(newP);
 }
 const remove = (obj)=>{
-    document.getElementById('hatesearch').removeChild(obj.parentNode);
+    document.getElementById('hatefood_search').removeChild(obj.parentNode);
 }
 const get_hate = async () => {
     try{

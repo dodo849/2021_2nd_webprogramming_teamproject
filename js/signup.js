@@ -26,13 +26,6 @@ const signup =async() =>{
         alert("두번째 보안질문을 입력해주세요");
     }
 
-
-     //입력된 글자가 6자 이상 10자 이하 일 때만 회원가입을 실행 시킨다.
-    if( 11>id.length && 11>password.length && 11>nickname.length
-       && 11>q1.length && 11>q2.length){
-           if(id.length>5 && password.length>5 && nickname.length>5
-            && q1.length>5 && q2.length>5 ){
-        
     
     if(password===passcheck){//비밀번호와 비밀번호 확인창이 일치 할 경우에만 실행
     if(id&&password&&nickname&&q1&&q2)
@@ -65,11 +58,4 @@ const signup =async() =>{
 }else{//비밀번호와 비밀번호 확인이 일치 하지 않을경우 알림창
     alert("비밀번호확인을 다시 입력해주세요");
     };
-
-}else{
-    alert("6자 이상 입력해주세요");
-}
-}else{
-    alert("10자 이내로 입력해주세요.");
-}
 };

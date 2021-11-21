@@ -40,7 +40,7 @@ const recommend_food = async () => {
             
             }
             const saveresponse = await axios.post("../php/HateSave.php", {
-                hateinput: hateinput
+                hateList: hateList
             });
             if (saveresponse.data){
                 console.log(saveresponse.data);
@@ -63,12 +63,21 @@ const remove = (obj)=>{
 }
 const get_hate = async () => {
     try{
-        const response = await axios.post("../php/getHate.php", {
-            hateinput: hateinput
-        });
+        const response = await axios.post("../php/getHate.php");
+        console.log(response.data);
         if(response.data){
             console.log(response.data.search_word);
-            document.getElementById(".hateinput").value = 'response.data.search_word';
+            for (let i=0; i<response.data.length; i++){
+                if (i>0){
+                    const box = document.getElementById("hatefood_search");
+                    const newP = document.createElement('p');
+                    newP.innerHTML = "<input type='text' placeholder='제외할 메뉴를 입력해주세요.' class='hateinput' ><input type='button' value='X' class='remove_button' onclick='remove(this)'>";
+                    box.appendChild(newP);
+                }
+                const hateinput_list = document.getElementsByClassName(`hateinput`);
+                console.log(hateinput_list);
+                hateinput_list[i].value = response.data[i].search_word;
+            }
         }
     }catch(error){
         console.log(error);

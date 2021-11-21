@@ -11,7 +11,7 @@
     
     <title>오늘의 메뉴</title>
 </head>
-<!--네이밍 수정 전-->
+
 <body>
     <header>
         <div class= "header_member">
@@ -23,27 +23,27 @@
             <a>회원가입</a>
         </div>
         <img class= "header_logo" src="../img/logo.png" alt="오늘의 메뉴 로고" width=280px>
-        <div class="nav_menu">
+        <div class="header_nav-menu">
             <div>&nbsp;</div>
-            <a class="menu_text">메뉴 추천</a>
-            <a class="menu_text">음식 목록</a>
+            <a>메뉴 추천</a>
+            <a>음식 목록</a>
             <div>&nbsp;</div>
         </div>
     </header>
     <main>
-        <div class="recommend">
-            <div id="hate">싫어하는 메뉴를 선택해주세요!</div>
-            <div id="hatesearch">
-                <label for="hateinput" id="hatefood">제외할 음식</label>
+        <div class="food_search">
+            <div id="hatemenu_text">싫어하는 메뉴를 선택해주세요!</div>
+            <div id="hatefood_search">
+                <label for="hateinput" id="hatefood_text">제외할 음식</label>
                 <input type="text" placeholder="제외할 메뉴를 입력해주세요." class="hateinput" >
-                <button id="searchbutton" onclick="recommend_food()">검색</button>
+                <button id="search_button" onclick="recommend_food()">검색</button>
             </div>
-            <div id="hate_button"><button id="plusbutton" onclick="add_input()">+</button></div>
-            <div id="loginsave">*로그인 시 검색 기록이 저장됩니다.</div>
+            <div id="hate_button"><button id="plus_button" onclick="add_input()">+</button></div>
+            <div id="loginsave_text">*로그인 시 검색 기록이 저장됩니다.</div>
         </div>
-        <div class="result">
-            <div id="foodresult">추천 결과</div>
-            <div id="howfood">오늘 이 메뉴는 어떠세요?</div>
+        <div class="food_result">
+            <div id="foodresult_text">추천 결과</div>
+            <div id="howfood_text">오늘 이 메뉴는 어떠세요?</div>
             <div id="foods">
                 <div class="food"></div>
                 <div class="food"></div>

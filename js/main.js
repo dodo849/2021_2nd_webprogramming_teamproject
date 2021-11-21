@@ -24,13 +24,15 @@ const recommend_food = async () => {
                     const card_p = document.createElement("p");
                     const new_p = document.createTextNode(response.data[i].food_detail);
                     card_p.appendChild(new_p);
-                    foodDOM[i].appendChild(card_p);
+                    
 
                     const card_img = document.createElement("img");
                     card_img.setAttribute("src", response.data[i].img);
                     foodDOM[i].appendChild(card_h3);
+                    foodDOM[i].appendChild(card_p);
                     foodDOM[i].appendChild(card_h5);
                     foodDOM[i].appendChild(card_img);
+                    
                 }
             
             }

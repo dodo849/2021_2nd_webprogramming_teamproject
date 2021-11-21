@@ -26,7 +26,7 @@ header{
 .header_logo{
     text-align: center;
 }
-.nav_menu{
+.header_nav-menu{
     background-color: white;
     font-weight: bold;
     font-size: 18px;
@@ -40,7 +40,7 @@ header{
     display: grid;
     grid-template-columns: 0.9fr 1fr 1fr 0.9fr;
 }
-.nav_menu > a:hover{
+.header_nav-menu > a:hover{
     color: #FF8A65;
 }
 /*메인-싫어하는 음식 입력 및 검색*/
@@ -48,25 +48,25 @@ main{
     display: grid;
     grid-template-rows: 1fr 850px;
 }
-.recommend{
+.food_search{
     background-color: #FAF9F5;
-}#hate{
+}#hatemenu_text{
     font-size: 16px;
     margin-top: 55px;
     text-align: center;
 }
-#hatesearch{
+#hatefood_search{
     text-align: center;
     margin-top: 45px
 }
-#hatesearch > p{
+#hatefood_search > p{
     margin-left: 60px;
 }
 #hate_button{
     text-align: center;
 }
 
-#hatefood{
+#hatefood_text{
     font-weight: bold;
     font-size: 22px;
     margin-right: 25px;
@@ -80,7 +80,7 @@ main{
     padding-left: 10px;
     margin-top: 15px;
 }
-#searchbutton{
+#search_button{
     font-weight: bold;
     font-size: 18px;
     background-color: #FF8A65;
@@ -91,7 +91,7 @@ main{
     border: 0px;
     margin-left: 25px;
 }
-#plusbutton{
+#plus_button{
     width: 350px;
     height: 40px;
     border-radius: 5px;
@@ -115,7 +115,7 @@ main{
     height: 25px;
     border-radius: 20px;
 }
-#loginsave{
+#loginsave_text{
     color: #A8A8A8;
     text-align: right;
     margin-top: 80px;
@@ -124,14 +124,14 @@ main{
 }
 
 /*메인-메뉴 추천 결과*/
-#foodresult{
+#foodresult_text{
     text-align: center;
     font-weight: bold;
     color:#FF8A65;
     margin-top: 65px;
     font-size: 24px;
 }
-#howfood{
+#howfood_text{
     text-align: center;
     color: #545454;
     margin-top: 20px;
@@ -176,6 +176,9 @@ main{
 }
 .food:hover p{
     display: block;
+}
+.food:hover h3, .food:hover h5, .food:hover img{
+    visibility: hidden;
 }
 /*푸터*/
 footer{

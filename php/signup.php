@@ -1,6 +1,5 @@
 <?php
-//DB임시로바꿈
-require_once("dbconfigDY.php"); 
+require_once("dbconfigID.php"); 
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 

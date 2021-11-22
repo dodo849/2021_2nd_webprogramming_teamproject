@@ -17,10 +17,7 @@ const sessionVariable = async (selectedFoodType) => {
 
 
 // 음식 분류 클릭 이벤트
-$(".card").click(function(){ //this를 써야해서 화살표함수 사용 불가
-    const selectedFoodType = $(this).attr('data-food-class');
-    sessionVariable(selectedFoodType);
-    location.href = "../html/foodListMenu.html"
-})
-
+const goFoodListMenu = (selectedFoodType) => {
+    location.href = `http://localhost:8080/html/foodListMenu.html?selectedFoodType=${selectedFoodType}`;
+}
 

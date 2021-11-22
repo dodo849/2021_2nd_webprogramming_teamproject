@@ -1,12 +1,23 @@
-/* 음식리스트 한식페이지 */
+/* 음식분류별 페이지 */
 
 .menu__title {
     text-align: center;
+    padding: 2rem 0 0 0;
 }
 
-.card{
+.card {
+    width: 200px;
+    height: 250px;
+    overflow : scroll;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 1vw;
+    background-color: white;
     position: relative;
-}
+}    
+
+
 .card:hover{
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff), linear-gradient(296.54deg, #FF8A65 0%, #FFCBBA 100%);

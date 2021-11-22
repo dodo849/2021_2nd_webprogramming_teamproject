@@ -6,7 +6,9 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 상단 네브 - 로그인·회원가입·마이페이지 네브*/
+/* ------foodList.css - nav, main, footer에 대한 css ------*/
+
+/*  1. 마이페이지/로그인/회원가입 네비바 */
 .nav-top ul{
     display: flex;
     justify-content: flex-end;
@@ -50,7 +52,7 @@
     margin: 0 auto;
 }
 
-/* 메인네비 - 음식 찾기/목록 네비 */
+/* 2. 메뉴 추천/음식목록 네비바 */
 
 .nav-main{
     width: 600px;

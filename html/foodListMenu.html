@@ -16,6 +16,8 @@
 </head>
 <body>
     <header>
+        <!-- 네비바가 2개 입니다. -->
+        <!-- 1. 마이페이지/로그인/회원가입 네비바 -->
         <nav class="nav-top">
             <ul>
                 <li><a href="../html/mypage.html">마이페이지</a></li>
@@ -24,13 +26,14 @@
             </ul>
         </nav>
         <img class="header__img-logo" src="../img/logo.png" alt="메인로고" width="250px">
+        <!-- 2. 메뉴 추천/음식목록 네비바 -->
         <nav class="nav-main">
             <ul>
                 <li><a class="nav-main__recommend">메뉴 추천</a></li>
                 <li><a class="nav-main__food-list">음식 목록</a></li>
             </ul>
         </nav>
-        <!-- 푸드 타입 동적으로 추가 -->
+        <!-- 푸드 타입(한식, 양식 ···) 타이틀 동적으로(js) 추가 -->
         <h1 class="menu__title js-menu__title"></h1>
     </header>
     <main>
@@ -46,6 +49,7 @@
         </section>
     </footer>
 
+    <!-- js 로드 -->
     <script type="text/javascript" src="../js/foodListMenu.js"></script>
 </body>
 </html>

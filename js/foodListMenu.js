@@ -1,21 +1,25 @@
+// ---- DB에서 음식 타입에 맞는 음식 리스트를 가져온다. ---- //
 const getFoodList = async () => {
   console.log(`getFoodList실행`)
   try {
+    
+    //get 방식으로 받은 음식 타입 파라미터 추출해 selectedFoodType 변수에 저장.
     const url = new URL(window.location.href);
     const urlParams = url.searchParams;
     selectedFoodType = urlParams.get('selectedFoodType');
     console.log(selectedFoodType);
 
-    //음식분류 타이틀 넣기
+    //DOM에 음식분류 타이틀 넣기
     $(".js-menu__title").html(selectedFoodType);
 
-    //DB에서 메뉴 가져오기
+    //DB에서 음식리스트 가져오기. 이때 가져올 푸드 타입 정보도 넘겨준다.
     const menuResponse = await axios.post("../php/getFoodList.php", {
       selectedFoodType : selectedFoodType,
     });
 
     console.log(menuResponse.data);
 
+    //php에서 받은 정보를 받아 html 요소를 넣는다.
     for(let i = 0; i < menuResponse.data.length; i++){
       $("main").append(`<section class="card js-card">
       <p class="js-food-id" style="display: none;">${menuResponse.data[i].id}</p>
@@ -27,21 +31,25 @@ const getFoodList = async () => {
       </section>`);
     }
 
-    //중복 코드 제거하기
+    //html 애니메이션 이벤트
     $(".js-card__detail").hide();
+    // 마우스를 올리면 img와 title이 사라지고 detail(원재료) 정보가 뜸
     $(".js-card").mouseover(function(e) {
       //애니메이션 중복되지 않도록 실행중인 애니메이션들은 취소해주기
       $(this).children().filter(".js-card__detail").clearQueue();
       $(this).children().filter(".js-card__title").clearQueue();
       $(this).children().filter(".js-card__img").clearQueue();
+
       $(this).children().filter(".js-card__title").fadeOut(200);
       $(this).children().filter(".js-card__img").fadeOut(200);
       $(this).children().filter(".js-card__detail").delay(250).fadeIn(200);
     })
+    // 마우스를 내리면 반대로 detail이 사라지고 title과 img 등장
     $(".card").mouseleave(function(e) {
       $(this).children().filter(".js-card__detail").clearQueue();
       $(this).children().filter(".js-card__title").clearQueue();
       $(this).children().filter(".js-card__img").clearQueue();
+
       $(this).children().filter(".js-card__detail").fadeOut(200);
       $(this).children().filter(".js-card__title").delay(300).fadeIn(200);
       $(this).children().filter(".js-card__img").delay(300).fadeIn(200);
@@ -51,16 +59,16 @@ const getFoodList = async () => {
       console.log(error);
   }
 };
+//html 로드 뒤 getFoodlist함수를 바로 실행한다.
 window.addEventListener('onload', getFoodList());
 
-//-----------------wish 기능-----------------//
+
+// ----------------- wish(찜) 기능 ----------------- //
 const getWishList = async () => {
   console.log(`getWishlist실행`)
   try {
     const response = await axios.get("../php/getWishList.php");
     if(response.data) {
-      // console.log(response.data);
-
       let wishDoneId;
       for(let i = 0; i < response.data.length; i++){
         wishDoneId = response.data[i].id;

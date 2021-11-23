@@ -23,6 +23,7 @@ const logout=async()=>{//세션삭제 함수 삭제후 로그인 페이지로 �
         console.log(error);
     }
 }
+
 const Pwdhange=()=>{//비밀번호 변경창 이동 함수
     window.open('../html/changepass.html','_self');
 }

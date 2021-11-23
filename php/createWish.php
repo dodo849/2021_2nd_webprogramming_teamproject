@@ -1,6 +1,6 @@
 <?php
-    require_once("dbconfigDY.php");
-    //require_once("dbconfigID.php"); 
+    //require_once("dbconfigDY.php");
+    require_once("dbconfigID.php"); 
     session_start();
 
     //로그인 세션 변수

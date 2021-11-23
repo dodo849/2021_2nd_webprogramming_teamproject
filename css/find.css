@@ -29,11 +29,14 @@ article #left{
     font-size: 17px;
     font-weight: bold;
 }
-
- #FindPassInput,#SecurityCheck01,#SecurityCheck02,select{
+.find{
     width: 90%;
     font-size: 17px;
 }
+ /*#FindPassInput,#SecurityCheck01,#SecurityCheck02,select{
+    width: 90%;
+    font-size: 17px;
+}*/
 
 #FindPassword{
     background-color: rgb(254,138,99);

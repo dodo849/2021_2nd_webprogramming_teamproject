@@ -31,27 +31,36 @@
        <article>
             <div id="top">회원가입</div>
             <div id="mid">
-             
+              <div>&nbsp;</div>
               <div id="SignupInput">
                <div id="left">아이디</div>
-               <div><input type="text" id="IdInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+               <!--인풋 내용을 검사하는 함수 00checktext()-->
+               <div><input type="text" id="IdInput" onchange="inputcheck01()" placeholder="글자 수 6~10자 사이로 입력"></div>
               </div>
+                 <div class="check" id="idchecktext">비어있습니다 입력해주세요</div>
              
               <div id="SignupInput">
                 <div id="left">비밀번호</div>
-                <div><input type="password"id="PasswordInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+                <div><input type="password"id="PasswordInput" onchange="inputcheck02()" placeholder="글자 수 6~10자 사이로 입력"></div>
              </div>
+             <div  class="check" id="pwdcheck01text">비어있습니다 입력해주세요</div>
+
 
      
              <div id="SignupInput">
               <div id="left">비밀번호 확인</div>
-              <div><input type="password" id="PasswordCheck" placeholder="비밀번호 다시 입력"></div>
+              <div><input type="password" id="PasswordCheck" onchange="inputcheck03()"placeholder="비밀번호를 한 번 더 입력해 주세요"></div>
              </div>
+             <div  class="check" id="pwdcheck02text">비어있습니다 입력해주세요</div>
+
+
     
              <div id="SignupInput">
             <div id="left">닉네임</div>
-            <div><input type="text" id="NickNameInput" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+            <!--인풋 내용을 검사하는 함수 00checktext()-->
+            <div><input type="text" id="NickNameInput" onchange="inputcheck04()"  placeholder="글자 수 2~10자 사이로 입력"></div>
              </div>
+             <div  class="check" id="nickchecktext">비어있습니다 입력해주세요</div>
            
             <div id="SignupInput">
              <div id="left">첫번째 보안질문</div>
@@ -66,8 +75,10 @@
             </div>
             <div id="SignupInput">
              <div>&nbsp;</div>
-             <div><input type="text" id="SecurityInput01" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+             <!--인풋 내용을 검사하는 함수 00checktext()-->
+             <div><input type="text" id="SecurityInput01" onchange="inputcheck05()"placeholder="글자 수 2~10자 사이로 입력"></div>
           </div>
+          <div class="check" id="q1check">비어있습니다 입력해주세요</div>
         
           <div id="SignupInput">
             <div id="left">두번째 보안질문</div>
@@ -83,12 +94,15 @@
 
          <div id="SignupInput">
           <div>&nbsp;</div>
-          <div><input type="text" id="SecurityInput02" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+          <!--인풋 내용을 검사하는 함수 00checktext()-->
+          <div><input type="text" id="SecurityInput02" onchange="inputcheck06()" placeholder="글자 수 2~10자 사이로 입력"></div>
          </div>
-          <div>&nbsp;</div>
+         <div class="check" id="q2check">비어있습니다 입력해주세요</div>
+        
          
          <div id="SignupInput">
           <div>&nbsp;</div>
+          <!--로그인 버튼의 함수 signup()-->
           <div> <button  id="SignUp" onclick="signup()">회원가입</button></div>
          </div>
          <div>&nbsp;</div>

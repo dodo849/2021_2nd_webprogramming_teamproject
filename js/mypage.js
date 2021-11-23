@@ -13,6 +13,7 @@ window.onload = wellcome=async()=>{//페이지가 열릴때 자동으로 실행�
         console.log(error);
     }
 };
+
 const logout=async()=>{//세션삭제 함수 삭제후 로그인 페이지로 이동.
     try{
         const respones = await axios.post("../php/logout.php",{});

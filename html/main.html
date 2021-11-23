@@ -8,7 +8,6 @@
     <link type="text/css" rel="stylesheet" href="../css/main.css">
     <script type="text/javascript" src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
-    
     <title>오늘의 메뉴</title>
 </head>
 
@@ -16,21 +15,22 @@
     <header>
         <div class= "header_member">
             <img src="../img/member_pic.png" alt="마이페이지" width=21>
-            <a>마이페이지</a>
+            <a href="mypage.html">마이페이지</a>
             <p>&nbsp;|&nbsp;</p>
-            <a>로그인</a>
+            <a href="login.html">로그인</a>
             <p>&nbsp;|&nbsp;</p>
-            <a>회원가입</a>
+            <a href="signup.html">회원가입</a>
         </div>
         <img class= "header_logo" src="../img/logo.png" alt="오늘의 메뉴 로고" width=280px>
         <div class="header_nav-menu">
             <div>&nbsp;</div>
-            <a>메뉴 추천</a>
-            <a>음식 목록</a>
+            <a href="main.html">메뉴 추천</a>
+            <a href="foodListMain.html">음식 목록</a>
             <div>&nbsp;</div>
         </div>
     </header>
     <main>
+        <!--비선호 음식 입력 후 검색-->
         <div class="food_search">
             <div id="hatemenu_text">싫어하는 메뉴를 선택해주세요!</div>
             <div id="hatefood_search">
@@ -41,9 +41,11 @@
             <div id="hate_button"><button id="plus_button" onclick="add_input()">+</button></div>
             <div id="loginsave_text">*로그인 시 검색 기록이 저장됩니다.</div>
         </div>
+        <!--메뉴 추천 결과-->
         <div class="food_result">
             <div id="foodresult_text">추천 결과</div>
             <div id="howfood_text">오늘 이 메뉴는 어떠세요?</div>
+            <!--DB에서 6종류 음식을 한 가지씩 랜덤으로 가져와 동적으로 추가됨-->
             <div id="foods">
                 <div class="food"></div>
                 <div class="food"></div>

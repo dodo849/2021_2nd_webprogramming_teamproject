@@ -11,7 +11,7 @@ body{
     grid-template-rows: 330px 1fr 150px;
 }
 
-/*헤더/네브*/
+/*헤더/네브바*/
 header{
     background-color: #FAF9F5;
     width: 100%;
@@ -43,35 +43,32 @@ header{
 .header_nav-menu > a:hover{
     color: #FF8A65;
 }
-/*메인-싫어하는 음식 입력 및 검색*/
+/*메인-비선호 음식 입력 및 검색*/
 main{
     display: grid;
     grid-template-rows: 1fr 850px;
 }
 .food_search{
     background-color: #FAF9F5;
-}#hatemenu_text{
+}#hatemenu_text{ /*싫어하는 음식을 선택해주세요! 텍스트*/
     font-size: 16px;
     margin-top: 55px;
     text-align: center;
 }
-#hatefood_search{
+#hatefood_search{ /*비선호 음식 입력&검색*/
     text-align: center;
     margin-top: 45px
 }
-#hatefood_search > p{
-    margin-left: 60px;
-}
-#hate_button{
+#hate_button{ /*+ 버튼*/
     text-align: center;
 }
 
-#hatefood_text{
+#hatefood_text{  /*제외할 음식 텍스트*/
     font-weight: bold;
     font-size: 22px;
     margin-right: 25px;
 }
-.hateinput{
+.hateinput{ /*입력창*/
     width: 340px;
     height: 40px;
     border: solid;
@@ -80,7 +77,10 @@ main{
     padding-left: 10px;
     margin-top: 15px;
 }
-#search_button{
+#hatefood_search >p{ /*추가되는 입력창*/
+    margin-left: 60px;
+}
+#search_button{ /*검색 버튼*/
     font-weight: bold;
     font-size: 18px;
     background-color: #FF8A65;
@@ -91,7 +91,7 @@ main{
     border: 0px;
     margin-left: 25px;
 }
-#plus_button{
+#plus_button{ /*+ 버튼*/
     width: 350px;
     height: 40px;
     border-radius: 5px;
@@ -104,7 +104,7 @@ main{
     padding: 0px;
     margin-left: 25px;
 }
-.remove_button{
+.remove_button{ /*X 버튼*/
     background-color: white;
     color:#CBCBCB;
     font-weight: bold;
@@ -115,7 +115,7 @@ main{
     height: 25px;
     border-radius: 20px;
 }
-#loginsave_text{
+#loginsave_text{ /**로그인 시 검색 기록이 저장됩니다. 텍스트*/
     color: #A8A8A8;
     text-align: right;
     margin-top: 80px;
@@ -124,27 +124,27 @@ main{
 }
 
 /*메인-메뉴 추천 결과*/
-#foodresult_text{
+#foodresult_text{ /*추천 결과 텍스트*/
     text-align: center;
     font-weight: bold;
     color:#FF8A65;
     margin-top: 65px;
     font-size: 24px;
 }
-#howfood_text{
+#howfood_text{  /*오늘 이 메뉴는 어떠세요? 텍스트*/
     text-align: center;
     color: #545454;
     margin-top: 20px;
     margin-bottom: 7px;
 }
-#foods{
+#foods{ /*추천 결과들*/
     width: 785px;
     display: flex;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.food{ 
+.food{ /*한식, 양식 등 각 추천 결과*/
     text-align: center;
     filter: drop-shadow(0px 4px 4px #A8A8A8);
     background-color: white;
@@ -165,7 +165,7 @@ main{
     max-width: initial;
     height: 200px;
 }
-.food p{
+.food p{ /*음식 재료*/
     font-size: 14px;
     color: #424242;
     padding: 10px;

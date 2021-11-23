@@ -1,5 +1,6 @@
 <?php
-require_once("dbconfigDY.php");
+require_once("dbconfigJM.php");
+//로그인시 유저당 저장된 비선호 메뉴 불러오기
 session_start();
 
 $data=array();

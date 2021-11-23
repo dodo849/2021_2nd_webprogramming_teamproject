@@ -1,12 +1,9 @@
 <?php
 require_once("dbconfigDY.php");
-
+//비선호 음식 input
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
-// $foodInput = $_POST["hateinput"];
 $foodInput = $_POST["hateList"];
-
 $foodInputToString="'";
-
 for($i=0; $i<count($foodInput); $i++){
     if($i == count($foodInput) - 1)
         $foodInputToString = $foodInputToString.$foodInput[$i]."'";
@@ -14,8 +11,8 @@ for($i=0; $i<count($foodInput); $i++){
         $foodInputToString = $foodInputToString.$foodInput[$i]."', '";
 }
 
+//비선호 음식 제외하고 음식 종류별로 한 가지씩 뽑아서 넣기
 $data = array();
-
 $types=array('한식', '양식', '중식', '일식', '패스트푸드', '디저트');
 for($i=0; $i<6; $i++){
     $sql="SELECT * FROM food WHERE food_type='$types[$i]' AND (food_name) NOT IN($foodInputToString) ORDER BY rand()";

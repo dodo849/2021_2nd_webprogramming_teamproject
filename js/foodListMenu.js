@@ -59,7 +59,7 @@ const getFoodList = async () => {
       console.log(error);
   }
 };
-//html 로드 뒤 getFoodlist함수를 바로 실행한다.
+//페이지가 로드된 뒤 바로 실행한다.
 window.addEventListener('onload', getFoodList());
 
 
@@ -67,13 +67,13 @@ window.addEventListener('onload', getFoodList());
 const getWishList = async () => {
   console.log(`getWishlist실행`)
   try {
+    //DB에서 찜한 목록을 가져온다
     const response = await axios.get("../php/getWishList.php");
     if(response.data) {
-      let wishDoneId;
       for(let i = 0; i < response.data.length; i++){
-        wishDoneId = response.data[i].id;
-        $(`.js-wish__btn[data-food-id="${wishDoneId}"]`).hide();
-        $(`.js-wish__btn--done[data-food-id="${wishDoneId}"]`).show();
+        //해당 아이디 값을 가지고 있는 요소의 찜버튼을 찜완료(btn--done)로 바꾼다.
+        $(`.js-wish__btn[data-food-id="${response.data[i].id}"]`).hide();
+        $(`.js-wish__btn--done[data-food-id="${response.data[i].id}"]`).show();
       }
     }
   }
@@ -81,12 +81,18 @@ const getWishList = async () => {
     console.log(error);
   }
 };
+//페이지가 로드된 뒤 바로 실행한다.
 window.addEventListener('onload', getWishList());
 
 
+//찜 or 찜 삭제 기능
+//찜 버튼을 누를 시 실행된다.
 const createWish = async (wishFoodId) => {
   console.log("createWish실행");
   try {
+    //찜할 메뉴의 id값을 php로 넘긴다
+    //php에서 해당 id와 user에 대한 레코드가 있는지 확인 한 후 있으면 해당 레코드를 삭제하고,
+    //없다면 insert한다.
     const response = await axios.post("../php/createWish.php",{
       wishFoodId : wishFoodId,
     });
@@ -94,7 +100,9 @@ const createWish = async (wishFoodId) => {
       console.log(response.data);
 
       //찜하기
+      //php는 찜을 추가했다면 true를, 삭제했다면 false를 반환한다.
       if(response.data == true){
+        //찜하기 버튼을 변경한다
         console.log(`.js-wish__btn[data-food-id="${wishFoodId}"]`);
         $(`.js-wish__btn[data-food-id="${wishFoodId}"]`).hide();
         $(`.js-wish__btn--done[data-food-id="${wishFoodId}"]`).show();

@@ -28,14 +28,13 @@ const recommend_food = async () => {
                     card_p.appendChild(new_p);
                     
                     const card_img = document.createElement("img");
-                    card_img.setAttribute("src", response.data[i].img);
+                    card_img.setAttribute("src", `./img/${response.data[i].img}`);
 
                     foodDOM[i].appendChild(card_h3);
                     foodDOM[i].appendChild(card_p);
                     foodDOM[i].appendChild(card_h5);
                     foodDOM[i].appendChild(card_img);
                 }
-            
             }
             //로그인시 비선호 메뉴 저장
             const saveresponse = await axios.post("../php/HateSave.php", {
@@ -62,6 +61,7 @@ const remove = (obj)=>{
 const get_hate = async () => {
     try{
         const response = await axios.post("../php/getHate.php");
+        console.log(response.data);
         if(response.data){
             for (let i=0; i<response.data.length; i++){
                 //비선호 메뉴가 여러개라면 입력창 추가
@@ -71,12 +71,43 @@ const get_hate = async () => {
                 const hateinput_list = document.getElementsByClassName(`hateinput`);
                 hateinput_list[i].value = response.data[i].search_word;
             }
+        }else{
+            const hateinput_list = document.getElementsByClassName(`hateinput`);
+            hateinput_list.value=""
         }
     }catch(error){
         console.log(error);
     }
 };
-
+const login_logout = async () => {
+    try{
+        const response = await axios.get("../php/getLoginName.php");
+        if(response.data){
+            const login_text = document.getElementById('login');
+            login_text.parentNode.removeChild(login_text);
+            const bar_text = document.getElementById('bar');
+            bar_text.parentNode.removeChild(bar_text);
+            const signup_text = document.getElementById('signup');
+            signup_text.parentNode.removeChild(signup_text);
+        }else {
+            const logout_text = document.getElementById('logout');
+            logout_text.parentNode.removeChild(logout_text);
+        }
+    }catch(error){
+        console.log(error);
+    }
+    
+};
+const logout=async()=>{//세션삭제 함수 삭제후 로그인 페이지로 이동.
+    try{
+        const respones = await axios.post("../php/logout.php",{});
+        window.open('../index.html','_self');  
+        console.log("로그아웃 성공 세션 삭제 완료.");
+    }catch(error){
+        console.log(error);
+    }
+}
 onload = () => {
-    get_hate();``
+    get_hate();
+    login_logout();
 };

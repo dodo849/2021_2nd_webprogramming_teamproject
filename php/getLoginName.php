@@ -4,5 +4,5 @@
         echo($_SESSION['User_Name']);
     }
     else{
-        echo false;
+        echo 'false';
     }

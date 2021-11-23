@@ -4,7 +4,7 @@ require_once("dbconfigJM.php");
 session_start();
 
 $data=array();
-if($_SESSION['userId']){
+if(isset($_SESSION['userId'])){
     $loginid = $_SESSION['userId'];
     $sql = "SELECT * FROM search_word WHERE user_id='$loginid'";
     $res = $db->query($sql);

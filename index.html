@@ -14,15 +14,16 @@
 <body>
     <header>
         <!--마이페이지 | 로그인 | 회원가입 네비바-->
-        <div class= "header_nav-member">
-            <img src="../img/member_pic.png" alt="마이페이지" width=21>
+        <div id= "header_nav-member">
+            <img src="./img/member_pic.png" alt="마이페이지" width=21>
             <a href="./html/mypage.html">마이페이지</a>
             <p>&nbsp;|&nbsp;</p>
-            <a href="./html/login.html">로그인</a>
-            <p>&nbsp;|&nbsp;</p>
-            <a href="./html/signup.html">회원가입</a>
+            <a id="login" href="./html/login.html">로그인</a>
+            <a id="logout" onclick="logout();" href="./html/login.html">로그아웃</a>
+            <p id="bar">&nbsp;|&nbsp;</p>
+            <a id="signup" href="./html/signup.html">회원가입</a>
         </div>
-        <img class= "header_logo" src="../img/logo.png" alt="오늘의 메뉴 로고" width=280px>
+        <img class= "header_logo" src="./img/logo.png" alt="오늘의 메뉴 로고" width=280px>
         <!--메뉴 추천 | 음식 목록 네비바-->
         <div class="header_nav-menu">
             <div>&nbsp;</div>
@@ -63,7 +64,7 @@
             <div>2021 웹프로그래밍 팀프로젝트</div>
             <p>김민수 | 이도연 | 이지민</p>
         </div>
-        <img src="../img/logo-white.png" width=200>
+        <img src="./img/logo-white.png" width=200>
     </footer>
 </body>
         

@@ -71,10 +71,6 @@ const get_hate = async () => {
                 const hateinput_list = document.getElementsByClassName(`hateinput`);
                 hateinput_list[i].value = response.data[i].search_word;
             }
-        }else{
-            const hateinput_list = document.getElementsByClassName(`hateinput`);
-            hateinput_list.value=""
-        }
     }catch(error){
         console.log(error);
     }

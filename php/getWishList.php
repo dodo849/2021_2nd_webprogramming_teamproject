@@ -28,7 +28,7 @@
     if($data != null) {
         echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
     } else {
-        echo "찜한 목록이 없습니다.";
+        echo false;
     }
     
     mysqli_close($db);

@@ -49,8 +49,9 @@ const changepwd=async()=>{//비밀번호 변경 버튼을 누를경우 작동하
     if(changepwdcheck==0){
         alert("비밀번호 확인을 입력해 주세요");
     };
-    if(11>changepwd.lenght>5)//6글자 이상 10글자 이하일 경우에만 실행된다
+    if(10>=changepwd.length)//6글자 이상 10글자 이하일 경우에만 실행된다
     {
+        if(changepwd.length>=6){
     if(changepwd && changepwdcheck){//새 비밀번호와 비밀번호 확인 둘다 입력 되어야지만 실행
     if(changepwd===changepwdcheck)//새 비밀번호와 비밀번호 확인창 입력 값이 같아야지 실행
     {
@@ -74,7 +75,11 @@ console.log("비밀번호 변경 실패");
 }else{
     alert("입력을 해 주세요.");
 }
+
+    }else{
+        alert("6글자 이상으로 새 비밀번호를 입력해주세요");
+    }
 }else{
-    alert("6글자이상 10글자 이하로 입력해주세요 ");
+    alert("10글자 이하로 새 비밀번호를 입력해주세요");
 }
 };

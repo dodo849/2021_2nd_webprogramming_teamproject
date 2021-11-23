@@ -1,5 +1,6 @@
 <?php
-    require_once("dbconfigDY.php");
+    //require_once("dbconfigDY.php");
+    require_once("dbconfigID.php");
     session_start();
 
     $loginUserId = $_SESSION['userId'];

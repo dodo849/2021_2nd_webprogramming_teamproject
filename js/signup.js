@@ -159,7 +159,7 @@ const signup =async() =>{
     }
    //글자수 조건에 맞아야지만 실행한다.
    if(id.length<=10&& password.length<=10 && nickname.length<=10 && q1.length<=10 && q2.length<=10) {
-       if(id.length>=6&& password.length>=6 && nickname.length>=6 && q1.length>=6 && q2.length>=6){
+       if(id.length>=6&& password.length>=6 && nickname.length>=2 && q1.length>=2 && q2.length>=2){
     if(password===passcheck){//비밀번호와 비밀번호 확인창이 일치 할 경우에만 실행
     if(id&&password&&nickname&&q1&&q2)//입력이 있을경우 실행
     {
@@ -175,7 +175,7 @@ const signup =async() =>{
                  console.log(respones.data);
                  alert("회원가입이 완료 되었습니다. 보안질문을 잘 기억해 주세요");
                  //회원가입이  제대로 되었을 경우 메인 페이지로 이동
-                 window.open('/html/main.html','_self');
+                 window.open('/index.html','_self');
              }
              else{
                  console.log("회원가입실패");
@@ -192,9 +192,9 @@ const signup =async() =>{
     alert("비밀번호확인을 다시 입력해주세요");
     };
        }else{
-        alert("회원가입 실패. 글자 수 조건에 맞게 입력하셨는지 확인해 주세요.")
+        alert("회원가입 실패. 글자 수 조건에 맞게 입력하셨는지 확인해 주세요.02")
     }
 }else{
-    alert("회원가입 실패. 글자 수 조건에 맞게 입력하셨는지 확인해 주세요.")
+    alert("회원가입 실패. 글자 수 조건에 맞게 입력하셨는지 확인해 주세요.01")
   }
 };

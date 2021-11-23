@@ -6,18 +6,18 @@ window.onload = wellcome=async()=>{//페이지가 열릴때 자동으로 실행�
             console.log(respones.data);
             //id가 wellcometext인 div태그의 내용물을 respons.data로 바꿈
             //response.data는 닉네임 세션 변수이다.
-            //000님 환영 합니다를 화면에 출력해준다.
+            //[유저 닉네임]님 환영 합니다를 화면에 출력해준다.
            document.getElementById("wellcometext").innerHTML=respones.data;
         }
     }catch(error){
-        console.log(error);
+        console.log(error); document.getElementById("wellcometext").innerHTML="에러입니다";
     }
 };
 
 const logout=async()=>{//세션삭제 함수 삭제후 로그인 페이지로 이동.
     try{
         const respones = await axios.post("../php/logout.php",{});
-        window.open('../html/main.html','_self');  
+        window.open('../html/login.html','_self');  
         console.log("로그아웃 성공 세션 삭제 완료.");
     }catch(error){
         console.log(error);

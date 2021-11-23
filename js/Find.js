@@ -20,7 +20,7 @@ const passfind03 =document.querySelector("#SecurityCheck02").value;
                 //php가 정상 실행 된 경우이다.
               alert("비밀번호는 "+respones.data+" 입니다.");
               //메인 페이지로 이동
-              window.open('../html/main.html','_self');
+              window.open('../index.html','_self');
               }
          }
        }catch(error){

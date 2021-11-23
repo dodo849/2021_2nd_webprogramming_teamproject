@@ -11,6 +11,7 @@ const recommend_food = async () => {
             const response = await axios.post("../php/recommend.php", {
                 hateList: hateList
             });
+            console.log(response.data);
             //비선호 음식을 제외한 랜덤 메뉴 추천 결과를 받아서 넣어줌
             if (response.data){
                 const foodDOM = document.querySelectorAll(".food");
@@ -71,6 +72,7 @@ const get_hate = async () => {
                 const hateinput_list = document.getElementsByClassName(`hateinput`);
                 hateinput_list[i].value = response.data[i].search_word;
             }
+        }
     }catch(error){
         console.log(error);
     }
@@ -78,6 +80,7 @@ const get_hate = async () => {
 const login_logout = async () => {
     try{
         const response = await axios.get("../php/getLoginName.php");
+        console.log(response.data);
         if(response.data){
             const login_text = document.getElementById('login');
             login_text.parentNode.removeChild(login_text);

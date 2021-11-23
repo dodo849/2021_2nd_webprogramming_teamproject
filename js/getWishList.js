@@ -50,18 +50,19 @@ const getWishList = async () => {
       console.log(error);
     }
 };
+window.addEventListener('onload', getWishList());
 
 const createWish = async (wishFoodId) => {
   console.log("createWish실행");
   try {
-    const wishResponse = await axios.post("../php/createWish.php",{
+    const response = await axios.post("../php/createWish.php",{
       wishFoodId : wishFoodId,
     });
-    if(wishResponse) {
-      console.log(wishResponse.data);
+    if(response) {
+      console.log(response.data);
 
       //찜하기
-      if(wishResponse.data == true){
+      if(response.data == true){
         console.log(`.wish__btn[data-food-id="${wishFoodId}"]`);
         $(`.wish__btn[data-food-id="${wishFoodId}"]`).hide();
         $(`.wish__btn--done[data-food-id="${wishFoodId}"]`).show();
@@ -77,5 +78,3 @@ const createWish = async (wishFoodId) => {
       console.log(error);
   }
 }
-
-getWishList();

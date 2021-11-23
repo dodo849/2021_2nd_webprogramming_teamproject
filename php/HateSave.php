@@ -1,5 +1,5 @@
 <?php
-require_once("dbconfigJM.php");
+require_once("dbconfigDY.php");
 session_start();
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);

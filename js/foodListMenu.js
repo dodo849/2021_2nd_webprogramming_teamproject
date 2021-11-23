@@ -25,7 +25,7 @@ const getFoodList = async () => {
       <p class="js-food-id" style="display: none;">${menuResponse.data[i].id}</p>
       <h3 class="card__title js-card__title">${menuResponse.data[i].food_name}</h3>
       <p class="card__detail js-card__detail">${menuResponse.data[i].food_detail}</p>
-      <img class="card__img js-card__img" src="../img/bibimbap.png" alt="${menuResponse.data[i].food_name}이미지">
+      <img class="card__img js-card__img" src="../img/${menuResponse.data[i].food_img}" alt="${menuResponse.data[i].food_name}이미지">
       <button class="wish__btn js-wish__btn" onclick="createWish(${menuResponse.data[i].id});" data-food-id="${menuResponse.data[i].id}"><i class="far fa-star"></i></button>
       <button class="wish__btn--done js-wish__btn--done" onclick="createWish(${menuResponse.data[i].id});" data-food-id="${menuResponse.data[i].id}" style="display: none;"><i class="fas fa-star"></i></button>
       </section>`);

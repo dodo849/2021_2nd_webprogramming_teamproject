@@ -1,5 +1,6 @@
-<?php
+<?php 
 require_once("dbconfigDY.php");
+//require_once("dbconfigID.php"); 
 //비선호 음식 input
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 $foodInput = $_POST["hateList"];

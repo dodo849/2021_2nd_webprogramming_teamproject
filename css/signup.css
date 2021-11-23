@@ -19,15 +19,21 @@ article #top{
     font-weight: bold;
 }
 #SignupInput{
-    padding-top: 5%;
+    padding-top: 3%;
     display: grid;
     grid-template-columns: 2fr 5fr;
 }
-article #left{
-    
+article #left{   
     text-align: center;
     font-size: 17px;
     font-weight: bold;
+}
+.check{
+    padding-top: 1%;
+    text-align: right;
+    padding-right: 10%;
+    font-size: 15px;;
+    color: tomato;
 }
 input,select{
     width: 90%;

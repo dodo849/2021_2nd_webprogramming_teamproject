@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/css/changepass.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
-    <script src="/js/changepass.js"></script>
+   <script src="/js/changepass.js"></script>
     <title>비밀번호변경</title>
   </head>
   <body>
@@ -33,12 +33,14 @@
             <div id="mid">
               <div id="ChangeInput">
                 <div id="left">새 비밀번호</div>
-                <div><input type="password" id="Change01" placeholder="6자 이상 10자 이하 글자 입력해주세요"></div>
+                <div><input onchange="inputcheck01()" type="password" id="Change01" placeholder="6~10자 사이로 변경할 비밀번호 입력"></div>
                </div>
+              <div id="pwdcheck01text"class="check">비어있습니다 입력해주세요</div>
                <div id="ChangeInput">
                 <div id="left">비밀번호 확인</div>
-                <div><input type="password" id="Change02"placeholder="다시 한번 입력해 주세요 "></div>
+                <div><input onchange="inputcheck02()" type="password" id="Change02"placeholder="다시 한번 입력해 주세요 "></div>
                </div>
+               <div id= "pwdcheck02text"class="check">비어있습니다 입력해주세요</div>
                <div id="ChangeInput">
                 <div>&nbsp;</div>
                 <div>

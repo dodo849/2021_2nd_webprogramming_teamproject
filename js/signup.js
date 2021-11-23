@@ -26,8 +26,6 @@ const signup =async() =>{
         alert("두번째 보안질문을 입력해주세요");
     }
 
-
-     //입력된 글자가 6자 이상 10자 이하 일 때만 실행
     
     if(password===passcheck){//비밀번호와 비밀번호 확인창이 일치 할 경우에만 실행
     if(id&&password&&nickname&&q1&&q2)

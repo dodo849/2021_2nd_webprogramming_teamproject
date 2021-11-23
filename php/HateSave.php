@@ -1,6 +1,5 @@
 <?php
-require_once("dbconfigJM.php");
-//로그인시 입력한 비선호 메뉴 저장(이전 기록은 삭제)
+require_once("dbconfigDY.php");
 session_start();
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);

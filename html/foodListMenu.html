@@ -11,35 +11,45 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- 엑시오스 cdn -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 아이콘(fontawesome) cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     <header>
-        <div class="header__nav-top">
-            <a>마이페이지</a>
-            <a>로그인</a>
-            <a>회원가입</a>
-        </div>
+        <!-- 네비바가 2개 입니다. -->
+        <!-- 1. 마이페이지/로그인/회원가입 네비바 -->
+        <nav class="nav-top">
+            <ul>
+                <li><a href="../html/mypage.html">마이페이지</a></li>
+                <li><a href="../html/login.html">로그인</a></li>
+                <li><a href="../html/signup.html">회원가입</a></li>
+            </ul>
+        </nav>
         <img class="header__img-logo" src="../img/logo.png" alt="메인로고" width="250px">
-        <div class="header__nav-sub">
-            <a>메뉴 추천</a>
-            <a>음식 목록</a>
-        </div>
-        <h1 class="header__title"></h1>
+        <!-- 2. 메뉴 추천/음식목록 네비바 -->
+        <nav class="nav-main">
+            <ul>
+                <li><a class="nav-main__recommend">메뉴 추천</a></li>
+                <li><a class="nav-main__food-list">음식 목록</a></li>
+            </ul>
+        </nav>
+        <!-- 푸드 타입(한식, 양식 ···) 타이틀 동적으로(js) 추가 -->
+        <h1 class="menu__title js-menu__title"></h1>
     </header>
-    <h1 class="menu__title"></h1>
     <main>
         <!-- DB에서 가져온 음식 정보들 동적으로 추가 -->
     </main>
     <footer>
-        <div class="footer__text-box">
+        <section class="footer__text-box">
             <h5 class="footer__title">2021 웹프로그래밍 팀프로젝트</h5>
             <p class="footer__detail">김민수   |   이도연   |   이지민</p>
-        </div>
-        <div class="footer__img-box">
+        </section>
+        <section class="footer__img-box">
             <img src="../img/logo-white.png" alt="로고이미지" >
-        </div>
+        </section>
     </footer>
 
+    <!-- js 로드 -->
     <script type="text/javascript" src="../js/foodListMenu.js"></script>
 </body>
 </html>

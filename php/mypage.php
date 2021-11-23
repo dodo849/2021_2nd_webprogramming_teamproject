@@ -1,4 +1,5 @@
 <?php
+//require_once("dbconfigDY.php");
 require_once("dbconfigDY.php");
 session_start();
 //세션 변수의 값 , 닉네임을 받아온다.

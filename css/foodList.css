@@ -6,26 +6,44 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 상단 네브바 */
-.header__nav-top{
+/* ------foodList.css - nav, main, footer에 대한 css ------*/
+
+/*  1. 마이페이지/로그인/회원가입 네비바 */
+.nav-top ul{
     display: flex;
     justify-content: flex-end;
     margin: 1.5rem;
 }
 
-.header__nav-top > a {
+.nav-top li{
+    height: 1rem;
+    list-style: none;
+}
+
+.nav-top li:nth-child(1), .nav-top li:nth-child(2){
+    border-right: 1px solid grey;
+}
+
+.nav-top a {
     text-align: center;
-    vertical-align: middle;
     font-size: 14px;
     color: #424242;
     padding: 0 0.8rem;
     background-color: white;
-    border: 0px solid white;
+    margin: 0;
+    position: relative;
+    top: -0.3rem;
+    text-decoration: none;
 }
 
-.header__nav-top > a:nth-child(1),.header__nav-top > a:nth-child(2){
+.nav-top > a:nth-child(1),.nav-top > a:nth-child(2){
     border-right: 1.8px solid rgb(199, 199, 199);
 }
+
+.nav-top a:hover{
+    color: #FF8A65;
+}
+
 
 /* 메인로고 */
 
@@ -34,36 +52,44 @@
     margin: 0 auto;
 }
 
-/* 서브네브바 */
+/* 2. 메뉴 추천/음식목록 네비바 */
 
-.header__nav-sub{
+.nav-main{
     width: 600px;
     height: 40px;
     margin: 20px auto;
+
     background-color: #FAF9F5;
     border-radius: 50px;
+}
 
+.nav-main ul{
     display: flex;
     justify-content: space-evenly;
 }
 
-.header__nav-sub > a {
+.nav-main li{
+    list-style: none;
+}
+
+.nav-main a {
     text-align: center;
     line-height: 35px;
     border: 0px solid #FAF9F5;
     background-color: #FAF9F5;
     font-weight: 600;
     font-size: 15px;
+    text-decoration: none;
 }
 
-.header__nav-sub > a:hover{
+.nav-main a:hover{
     color: #FF8A65;
 }
 
-.header__title{
-    text-align: center;
-    margin: 50px 0;
+.nav-main__food-list{
+    color: #FF8A65;
 }
+
 
 /* 메인부 */
 
@@ -74,19 +100,6 @@ main{
     width: 50%;
     margin: 10vh auto 20vh auto;
 }
-
-.card {
-    width: 200px;
-    height: 250px;
-    overflow : scroll;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    margin: 1vw;
-    background-color: white;
-}
-
-
 
 /* 푸터 */
 

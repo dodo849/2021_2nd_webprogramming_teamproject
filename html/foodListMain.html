@@ -14,54 +14,62 @@
 </head>
 <body>
     <header>
-        <div class="header__nav-top">
-            <a>마이페이지</a>
-            <a>로그인</a>
-            <a>회원가입</a>
-        </div>
+        <!-- 네비바가 2개 입니다. -->
+        <!-- 1. 마이페이지/로그인/회원가입 네비바 -->
+        <nav class="nav-top">
+            <ul>
+                <li><a href="../html/mypage.html">마이페이지</a></li>
+                <li><a href="../html/login.html">로그인</a></li>
+                <li><a href="../html/signup.html">회원가입</a></li>
+            </ul>
+        </nav>
         <img class="header__img-logo" src="../img/logo.png" alt="메인로고" width="250px">
-        <div class="header__nav-sub">
-            <a>메뉴 추천</a>
-            <a class="header__menu-list">음식 목록</a>
-        </div>
+        <!-- 2. 메뉴 추천/음식목록 네비바 -->
+        <nav class="nav-main">
+            <ul>
+                <li><a class="nav-main__recommend" href="../html/main.html">메뉴 추천</a></li>
+                <li><a class="nav-main__food-list">음식 목록</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- css 네이밍 수정하기  -->
+    <!-- 메인부 - card 클릭하면 한식, 양식 ···별 음식 리스트를 볼 수 있는 페이지(foodListMenu.html)페이지로 이동 -->
     <main>
-        <div class="card" data-food-class="korea">
+        <section class="card" onclick="goFoodListMenu('한식');" data-food-class="korea">
             <h3 class="card__title">한식</h3>
             <img class="card__img" src="../img/bibimbap.png" alt="한식이미지">
-        </div>
-        <div class="card" data-food-class="western">
+        </section>
+        <section class="card" onclick="goFoodListMenu('양식');" data-food-class="western">
             <h3 class="card__title">양식</h3>
             <img class="card__img" src="../img/pasta.png" alt="양식이미지">
-        </div>
-        <div class="card" data-food-class="china">
+        </section>
+        <section class="card" onclick="goFoodListMenu('중식');" data-food-class="china">
             <h3 class="card__title">중식</h3>
             <img class="card__img" src="../img/dimsum.png" alt="중식이미지">
-        </div>
-        <div class="card" data-food-class="japanese">
+        </section>
+        <section class="card" onclick="goFoodListMenu('일식');" data-food-class="japanese">
             <h3 class="card__title">일식</h3>
             <img class="card__img" src="../img/sushi.png" alt="일식이미지">
-        </div>
-        <div class="card" data-food-class="fast">
+        </section>
+        <section class="card" onclick="goFoodListMenu('패스트푸드');" data-food-class="fast">
             <h3 class="card__title">패스트푸드</h3>
             <img class="card__img" src="../img/fast-food.png" alt="패스트푸드이미지">
-        </div>
-        <div class="card" data-food-class="dessert">
+        </section>
+        <section class="card" onclick="goFoodListMenu('디저트');" ata-food-class="dessert">
             <h3 class="card__title">디저트</h3>
             <img class="card__img" src="../img/cake.png" alt="디저트이미지">
-        </div>
+        </section>
     </main>
     <footer>
-        <div class="footer__text-box">
+        <section class="footer__text-box">
             <h5 class="footer__title">2021 웹프로그래밍 팀프로젝트</h5>
             <p class="footer__detail">김민수   |   이도연   |   이지민</p>
-        </div>
-        <div class="footer__img-box">
+        </section>
+        <section class="footer__img-box">
             <img src="../img/logo-white.png" alt="로고이미지" >
-        </div>
+        </section>
     </footer>
 
+    <!-- js 로드 -->
     <script type="text/javascript" src="../js/foodListMain.js"></script>
 </body>
 </html>

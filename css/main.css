@@ -11,13 +11,14 @@ body{
     grid-template-rows: 330px 1fr 150px;
 }
 
-/*헤더/네브바*/
+/*헤더,네비바*/
 header{
     background-color: #FAF9F5;
     width: 100%;
     text-align: center;
 }
-.header_member{
+/*마이페이지 | 로그인 | 회원가입 네비바*/
+.header_nav-member{
     font-size: 15px;
     display: flex;
     justify-content: flex-end;
@@ -26,6 +27,7 @@ header{
 .header_logo{
     text-align: center;
 }
+/*메뉴 추천 | 음식 목록 네비바*/
 .header_nav-menu{
     background-color: white;
     font-weight: bold;

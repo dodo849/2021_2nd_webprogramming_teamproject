@@ -8,10 +8,13 @@ section {
 }
 
 article{
+    /*중앙의 내용물이 표시되는 부분을 세로로 그리드 하여 나눈다*/
+    display: grid;
     display: grid;
     grid-template-rows: 1fr 1.5fr 3fr;
 }
 #top {
+    /*마이페이지 라고 적히는 상단 부분의 스타일*/
     font-weight: bold;
     text-align: center;
     font-size: 30px;
@@ -19,32 +22,39 @@ article{
     border-bottom:  2px solid rgb(254,138,99);
 }
 #mid{
+    /*내용물이 표시되는 부분의 크기를 1데 1의 크기로 분할*/
     display: grid;
     grid-template-columns: 1fr 1fr;
 
 }
 #Box01{
+    /*00님 환영합니다 및  비밀번호 변경이 있는 #box01의 패딩을 지정*/
   padding-top: 10%;
 }
 #Box01 #wellcome{
+    /*00님 환영합니다 부분의 스타일 */
     font-weight: bold;
     font-size: 20px;
     padding-left: 10%;
 }
-#change,#delete{
+#change{
+    /*비밀번호 변경하기 의 스타일*/
     padding-left: 10%;
      padding-top: 2%;
      text-align: left;
 }
-#change:hover,#delete:hover{
+#change:hover{
+    /*비밀번호 변경하기의 마우스 호버 스타일*/
    color: gray;
 }
 #LOGOUT{
+    /*로그아웃 버튼을 포함하는 div 태그의 스타일 지정*/ 
     padding-top: 10%;
     text-align: right;
     padding-right: 10%;
 }
 #LogOut{
+    /*로그아웃 버튼의 스타일 지정*/
     background-color: rgb(254,138,99);
     border: 0px;
     border-radius: 10px;
@@ -59,20 +69,23 @@ article{
 #LogOut:hover{
     border:2px solid black;
 }
+
 #bottom #ListName{
     font-weight: bold;
     font-size: 25px;
 }
+/*찜 목록의 배치*/
 #bottom #List{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     width: 100%;
     height: 80%;
 }
+/*
 #list01,#list02,#list03,#list04{
     width: 80%;
     height: 80%;
     margin: 10%;
     border-radius: 10px;
     border: 1px solid black;
-}
+}*/

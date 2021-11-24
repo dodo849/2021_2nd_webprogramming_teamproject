@@ -7,6 +7,7 @@ section {
 }
 
 article{
+    /*중앙 내용물의 배치 레이아웃*/
     display: grid;
     grid-template-rows: 1fr 6fr;
 }
@@ -19,16 +20,19 @@ article #top{
     font-weight: bold;
 }
 #SignupInput{
+    /*아이디(비밀번호, 닉네임 등등)의 텍스트와 | 인풋 의 화면 분할*/
     padding-top: 3%;
     display: grid;
     grid-template-columns: 2fr 5fr;
 }
 article #left{   
+    /*아이디(비밀번호, 닉네임 등등)의 텍스트의 스타일 */
     text-align: center;
     font-size: 17px;
     font-weight: bold;
 }
 .check{
+    /*유효성 검사 하는 div 의 스타일 지정*/
     padding-top: 1%;
     text-align: right;
     padding-right: 10%;
@@ -36,13 +40,16 @@ article #left{
     color: tomato;
 }
 input,select{
+    /*인풋과 셀렉트의 스타일*/
     width: 90%;
     font-size: 17px;
 }
 #SignUp:hover{
+    /*회원가입 버튼의 스타일*/
     border: 2px solid black;
 }
 #SignUp{
+    /*회원가입 버튼의 스타일*/
     background-color: rgb(254,138,99);
     border: 0px;
     border-radius: 10px;

@@ -17,7 +17,8 @@ if ($row==!null) {
     //배열에 값이 있다. 즉 비밀번호를 찾았다라는 뜻. 
     echo($row['pwd']);//비밀번호값 을 준다
 } else {   
-     echo false; 
+    //비밀번호찾기에 실패 했을경우 "실패" 값
+    echo("실패"); 
 }
 mysqli_close($db);
 

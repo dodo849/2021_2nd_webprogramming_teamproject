@@ -1,6 +1,5 @@
 <?php
-//require_once("dbconfigDY.php");
-require_once("dbconfigID.php"); 
+require_once("dbconfig.php"); 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 //받아온 값을 변수에 넣는다 
 $passfind01 = $_POST["passfind01"];//아이디

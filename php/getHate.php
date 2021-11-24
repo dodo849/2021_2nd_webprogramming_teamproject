@@ -1,7 +1,6 @@
 <?php
 //이지민 작성//
-//require_once("dbconfigDY.php");
-require_once("dbconfigID.php"); 
+require_once("dbconfig.php"); 
 //로그인시 유저당 저장된 비선호 메뉴 불러오기
 session_start();
 

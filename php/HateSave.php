@@ -1,7 +1,6 @@
 <?php
 //이지민 작성//
-//require_once("dbconfigDY.php");
-require_once("dbconfigID.php");
+require_once("dbconfig.php");
 session_start();
 
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);

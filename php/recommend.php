@@ -1,7 +1,6 @@
 <?php 
 //이지민 작성//
-//require_once("dbconfigDY.php");
-require_once("dbconfigID.php"); 
+require_once("dbconfig.php"); 
 //비선호 음식 input
 $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 $foodInput = $_POST["hateList"];

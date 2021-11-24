@@ -1,4 +1,4 @@
-//인풋에 입력된 글자의 유효성 검사
+//input에 입력된 글자의 유효성 검사
 const inputcheck01 =()=>{
     //아이디 입력의 글자수 조건충족유무 알림 함수
     //#IdInput의 입력된 값을 가져온다
@@ -164,6 +164,7 @@ const signup =async() =>{
     if(id&&password&&nickname&&q1&&q2)//입력이 있을경우 실행
     {
         try{
+            //비동기 방식 사용
              const respones = await axios.post("../php/signup.php",{
                 id:id,
                 password:password,

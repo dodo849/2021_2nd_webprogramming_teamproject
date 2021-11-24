@@ -17,6 +17,7 @@
       <div id="navLeft">
         <div>
           <img id="logo01" src="/img/logo.png"> </div>
+          <!--네이게이션 바의 링크 -->
           <div id="linktext"><a href="../index.html">메뉴 추천</a></div>
           <div id="linktext"><a href="../html/foodListMain.html">음식 목록</a></div>
         <div>&nbsp;</div>
@@ -27,19 +28,25 @@
     </nav>
     <!--화면 중앙의 콘텐츠 들이 표시 되는곳-->
     <section>
-      <div>&nbsp;</div>
+      <div>&nbsp;</div><!--화면 왼쪽 공백-->
        <article>
             <div id="top">비밀번호 변경</div>
             <div id="mid">
+              <!--changeInput에서 변경할 비밀번호의 입력을 받는다 -->
               <div id="ChangeInput">
+                <!--새 비밀번 입력 -->
                 <div id="left">새 비밀번호</div>
                 <div><input onchange="inputcheck01()" type="password" id="Change01" placeholder="6~10자 사이로 변경할 비밀번호 입력"></div>
                </div>
+               <!--비어있을 시 출력되는 문구-->
               <div id="pwdcheck01text"class="check">비어있습니다 입력해주세요</div>
+
                <div id="ChangeInput">
+                 <!--비밀번호확인 입력 -->
                 <div id="left">비밀번호 확인</div>
                 <div><input onchange="inputcheck02()" type="password" id="Change02"placeholder="다시 한번 입력해 주세요 "></div>
                </div>
+               <!--비어있을 시 출력되는 문구-->
                <div id= "pwdcheck02text"class="check">비어있습니다 입력해주세요</div>
                <div id="ChangeInput">
                 <div>&nbsp;</div>
@@ -51,7 +58,7 @@
        </article>
       <div>&nbsp;</div>
     </section>
-   <!--푸터 -->
+   <!--하단 푸터바  -->
     <footer>
       <div id="footerLeft">
         <div>

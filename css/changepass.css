@@ -6,6 +6,7 @@ section {
     overflow: hidden;
 }
 article{
+    /*중앙의 내용물이 표시되는 부분을 세로로 그리드 하여 나눈다*/
     display: grid;
     grid-template-rows: 1fr 3fr;
 }
@@ -17,6 +18,7 @@ article{
     border-bottom:  2px solid rgb(254,138,99);
 }
 article #ChangeInput{
+    /*텍스트 | 인풋텍스트 의 레이아웃을 1대 3 비율로 나누어 분할한다*/
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding-top: 5%;
@@ -26,29 +28,21 @@ article #left{
     font-weight: bold;
     font-size: 17px;
 }
-.check{
-    padding-top: 1%;
-    text-align: right;
-   padding-right: 10%;
-    font-size: 15px;;
-    color: tomato;
-}
 #Change01,#Change02{
+    /*비밀번호 입력 인풋의 크기및 스타일 지정*/
     width: 90%;
     font-size: 17px;
 }
-#Link{
+.check{
+    /*유효성 검사 디브태그의 스타일 지정*/
+    padding-top: 1%;
     text-align: right;
+    padding-right: 10%;
+    font-size: 15px;;
+    color: tomato;
 }
-#Link a{
-    text-decoration: none;
-    color: darkgray;
-}
-#Link a:hover{
-    color: black;
-}
-
 #ChangePass{
+    /*비밀번호 변경 버튼의 스타일 지정*/
     background-color: rgb(254,138,99);
     border: 0px;
     border-radius: 10px;
@@ -62,6 +56,7 @@ article #left{
     border: 2px solid white;
 }
 #ChangePass:hover{
+    /*비밀번호 변경 버튼을 눌렀을 경우*/
     border: 2px solid black;
 }
    

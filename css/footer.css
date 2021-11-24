@@ -1,5 +1,6 @@
-
+/*2018010842 김민수의 푸터바 사용 css*/
 footer{
+    /*부터 의 크기를 1대 1로 나눈다 (오른쪽 왼쪽)*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color:rgb(66, 66, 66);
@@ -8,22 +9,26 @@ footer{
     overflow: hidden;
 }
 #footerLeft{
+    /*푸터의 왼쪽을 또 1.5 대 1대 1로 나눈다*/
  color:white;
  display: grid;
  grid-template-columns: 1.5fr 1fr 1fr;
 }
 #text11{
+    /*왼쪽에서 1.5로 나누어진 부분의 상부 텍스트*/
     font-weight: bold;
     padding-top: 10%;
     text-align: center;
     font-size: 13px;
 }
 #text12{
+    /*왼쪽에서 1.5로 나누어진 부분의 하부 텍스트*/
     margin-top: 5%;
     text-align: center;
     font-size: 10px;
 }
 #footerRight{
+    /*푸터의 오른쪽을 왼쪽과 동일하게   1.5 대 1대 1로 나눈다*/
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
     text-align: center;

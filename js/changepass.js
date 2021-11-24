@@ -1,4 +1,6 @@
+//비밀번호 변경 js
 const inputcheck01 =()=>{
+    //onchange="inputcheck01()"
     //비밀번호 변경을 위해 입력한 새 비밀번호가 조건에 맞는지 알려주는 함수
     //#Change01의 값을 가져온다
     const password=document.querySelector("#Change01").value;
@@ -22,6 +24,7 @@ const inputcheck01 =()=>{
     }
 }
 const inputcheck02 =()=>{
+    //onchange="inputcheck02()"
     //새비밀번호 입력과 비밀번호 입력이 일치하는지 알려주는 함수
     //값을 받아온다
     const password=document.querySelector("#Change01").value;
@@ -39,24 +42,31 @@ const inputcheck02 =()=>{
 }
 
 
-const changepwd=async()=>{//비밀번호 변경 버튼을 누를경우 작동하는 함수
-    //값을 받아온다
+const changepwd=async()=>{
+    //onclick="changepwd()
+    //비밀번호 변경 버튼을 누를경우 작동하는 함수값을 받아온다
     const changepwd=document.querySelector('#Change01').value;   
     const changepwdcheck=document.querySelector('#Change02').value;
     if(changepwd==0){
+        //비밀번호 입력값이 없을경우의 안내창
         alert("비밀번호를 입력해 주세요");
     }
     if(changepwdcheck==0){
+        //비밀번호 확인창의 입력값이 없을 경우의 안내창
         alert("비밀번호 확인을 입력해 주세요");
     };
+
+
     if(10>=changepwd.length)//6글자 이상 10글자 이하일 경우에만 실행된다
     {
-        if(changepwd.length>=6){
+        if(changepwd.length>=6){//6글자 이상 10글자 이하일 경우에만 실행된다
     if(changepwd && changepwdcheck){//새 비밀번호와 비밀번호 확인 둘다 입력 되어야지만 실행
     if(changepwd===changepwdcheck)//새 비밀번호와 비밀번호 확인창 입력 값이 같아야지 실행
     {
     try{
+        //respones로 값을 받고 비동기이므로 await 를 쓴다
         const respones = await axios.post("../php/changepass.php",{
+            //객체
             changepwd:changepwd,
         });
         //성공적으로 변환 되었을 경우
@@ -69,17 +79,20 @@ const changepwd=async()=>{//비밀번호 변경 버튼을 누를경우 작동하
     }
 }else//새 비밀번호와 비밀번호 확인의 입력값이 다를경우
 {
+    //비밀벊호 입력의 값과 비밀번호의 값이 다른경우
 alert("비밀번호 확인의 입력을 다시한번 확인해 주세요.");
-console.log("비밀번호 변경 실패");
 }
 }else{
+    //비워져 있을 경우
     alert("입력을 해 주세요.");
 }
 
     }else{
+        //5글자 이하로 입력하였을 경우
         alert("6글자 이상으로 새 비밀번호를 입력해주세요");
     }
 }else{
+    //11글자 이상으로 입력하였을경우
     alert("10글자 이하로 새 비밀번호를 입력해주세요");
 }
 };

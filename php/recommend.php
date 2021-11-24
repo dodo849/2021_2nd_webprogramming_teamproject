@@ -1,4 +1,5 @@
 <?php 
+//이지민 작성//
 //require_once("dbconfigDY.php");
 require_once("dbconfigID.php"); 
 //비선호 음식 input

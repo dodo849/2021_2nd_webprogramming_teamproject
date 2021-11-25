@@ -4,7 +4,7 @@
 
     $loginUserId = $_SESSION['userId'];
     
-    //wish 테이블에서 현재 유저 정보 불러오기
+    //wish 테이블에서 현재 유저에 대한 레코드 불러오기
     $sql = "SELECT * FROM wish WHERE user_id='$loginUserId';"; //sql 구문 넣기
 
     $data = array();

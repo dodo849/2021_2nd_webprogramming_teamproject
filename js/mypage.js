@@ -10,7 +10,7 @@ window.onload = wellcome=async()=>{
             //[유저 닉네임]님 환영 합니다를 화면에 출력해준다.
            document.getElementById("wellcometext").innerHTML=respones.data;
         }else if(respones.data==0){
-            //resopnse 의 값이 없다면 출력
+            //resopnse 의 값0이 없다면 출력
             document.getElementById("wellcometext").innerHTML="에러입니다";
         }
     }catch(error){

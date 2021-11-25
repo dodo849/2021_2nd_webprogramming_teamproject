@@ -9,7 +9,7 @@ window.onload = wellcome=async()=>{
             //response.data는 닉네임 세션 변수이다.
             //[유저 닉네임]님 환영 합니다를 화면에 출력해준다.
            document.getElementById("wellcometext").innerHTML=respones.data;
-        }else{
+        }else if(respones.data==0){
             //resopnse 의 값이 없다면 출력
             document.getElementById("wellcometext").innerHTML="에러입니다";
         }

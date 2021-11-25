@@ -97,7 +97,7 @@ const createWish = async (wishFoodId) => {
 
       //찜하기
       //php는 찜을 추가했다면 true를, 삭제했다면 false를 반환한다.
-      if(response.data === true){
+      if(response.data == true){
         //찜하기 버튼을 변경한다
         $(`.js-wish__btn[data-food-id="${wishFoodId}"]`).hide();
         $(`.js-wish__btn--done[data-food-id="${wishFoodId}"]`).show();

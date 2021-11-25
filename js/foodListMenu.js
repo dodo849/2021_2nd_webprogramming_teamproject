@@ -17,8 +17,6 @@ const getFoodList = async () => {
       selectedFoodType : selectedFoodType,
     });
 
-    console.log(menuResponse.data);
-
     //php에서 받은 정보를 받아 html 요소를 넣는다.
     for(let i = 0; i < menuResponse.data.length; i++){
       $("main").append(`<section class="card js-card">
@@ -99,7 +97,7 @@ const createWish = async (wishFoodId) => {
 
       //찜하기
       //php는 찜을 추가했다면 true를, 삭제했다면 false를 반환한다.
-      if(response.data == true){
+      if(response.data === true){
         //찜하기 버튼을 변경한다
         $(`.js-wish__btn[data-food-id="${wishFoodId}"]`).hide();
         $(`.js-wish__btn--done[data-food-id="${wishFoodId}"]`).show();

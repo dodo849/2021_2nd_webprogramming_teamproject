@@ -166,6 +166,7 @@ const signup =async() =>{
         try{
             //비동기 방식 사용
              const respones = await axios.post("../php/signup.php",{
+                 //객체를 넘긴다
                 id:id,
                 password:password,
                 nickname:nickname,
